@@ -14,9 +14,23 @@ Including another URLconf
     2. Import the include() function: from django.conf.urls import url, include
     3. Add a URL to urlpatterns:  url(r'^blog/', include(blog_urls))
 """
-from django.conf.urls import url, include
+from django.conf.urls import url
 from django.contrib.gis import admin
+from rest_framework.urlpatterns import format_suffix_patterns
+
+from us_counties import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
 ]
+
+urlpatterns += [
+    url(r'^$', views.index, name='index'),
+    url(r'^county-borders/$', views.CountyBorderList.as_view()),
+    url(r'^state/(?P<state>[0-9]+)/county-borders/$', views.CountyBorderListByState.as_view()),
+
+
+    # url(r'^county-borders/(?P<pk>[0-9]+)/$', views.SnippetDetail.as_view()),
+]
+
+urlpatterns = format_suffix_patterns(urlpatterns)
