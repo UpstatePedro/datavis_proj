@@ -2,7 +2,7 @@
 
 {% load staticfiles %}
 
-<html lang="en">
+<html lang="en" ng-app="VisApp">
 <head>
     <meta charset="UTF-8">
     <title>TDV</title>
@@ -14,18 +14,31 @@
     <script src="{% static 'lib/node_modules/topojson/build/topojson.min.js' %}"></script>
     <script src="{% static 'lib/node_modules/d3/d3.min.js' %}"></script>
     <script src="{% static 'lib/node_modules/angular/angular.min.js' %}"></script>
+    <script src="{% static 'lib/node_modules/angular-route/angular-route.min.js' %}"></script>
     <script src="{% static 'lib/node_modules/angular-resource/angular-resource.min.js' %}"></script>
 
-    {#  Third party packages  #}
+    {#  App scripts  #}
+    <script src="{% static 'visApp/app.js' %}"></script>
+    <script src="{% static 'visApp/config/routes.js' %}"></script>
+    <script src="{% static 'visApp/controllers/VisAppLandingController.js' %}"></script>
+
 
 
 </head>
 <body>
-    <div class="row">
-        <div class="col-md-10 col-md-offset-1">
-            This is the index page :-)
-            <button class="btn btn-danger">First button</button>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                This is the index page :-)
+                <button class="btn btn-danger">First button</button>
+            </div>
+        </div>
+
+        <div class="row" ng-view>
+
         </div>
     </div>
+
 </body>
 </html>
