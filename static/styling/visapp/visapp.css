@@ -1,0 +1,67 @@
+:root {
+  --top-level-site-bg: rgb(28, 58, 64);
+  --mid-level-site-bg: rgb(57, 116, 127);
+  --low-level-site-bg: rgb(139, 182, 191);
+
+  --top-level-site-txt: rgb(255, 252, 238);
+  --mid-level-site-txt: rgb(209, 207, 195);
+  --low-level-site-txt: rgb(90, 90, 85);
+
+  --header-height: 100px;
+
+  --thumbnail-shade-1: rgb(255, 220, 165);
+  --thumbnail-shade-2: rgb(230, 180, 200);
+  --thumbnail-shade-3: rgb(220, 220, 255);
+  --thumbnail-shade-4: rgb(195, 240, 225);
+  --thumbnail-shade-5: rgb(255, 255, 205);
+}
+
+/* VisApp wrapper */
+
+.application-header {
+  padding-left: 50px;
+  padding-right: 50px;
+  background-color: var(--top-level-site-bg);
+  color: var(--top-level-site-txt);
+  height: var(--header-height);
+  font-size: 3em;
+}
+
+.main-body {
+  margin-top: var(--header-height);
+  padding-top: 20px;
+}
+
+.nav-option {
+  background: var(--mid-level-site-bg);
+  color: var(--top-level-site-txt);
+}
+
+a {
+  color: var(--top-level-site-txt);
+}
+
+li.nav-option > a:hover {
+  background: var(--low-level-site-bg);
+  color: var(--low-level-site-txt);
+}
+
+.application-footer {
+  background-color: var(--top-level-site-bg);
+  height: 100px;
+}
+
+/* Landing page */
+
+.thumbnail#county-map {
+  background: linear-gradient( to left top, var(--thumbnail-shade-2), var(--thumbnail-shade-3));
+}
+.thumbnail#yield {
+  background: linear-gradient( to right top, var(--thumbnail-shade-2), var(--thumbnail-shade-1));
+}
+.thumbnail#wasde {
+  background: linear-gradient( to right top, var(--thumbnail-shade-5), var(--thumbnail-shade-2));
+}
+.thumbnail#clusters {
+  background: linear-gradient( to left top, var(--thumbnail-shade-4), var(--thumbnail-shade-2));
+}
