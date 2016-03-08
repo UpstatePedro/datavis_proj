@@ -27,7 +27,7 @@ urlpatterns = [
 urlpatterns += [
     url(r'^$', views.index, name='index'),
     url(r'^county-borders/$', views.CountyBorderList.as_view()),
-    url(r'^state/(?P<state>[0-9]+)/county-borders/$', views.CountyBorderListByState.as_view()),
+    url(r'^api/state/(?P<state>[0-9]+)/county-borders/$', views.CountyBorderListByState.as_view()),
 
 
     # url(r'^county-borders/(?P<pk>[0-9]+)/$', views.SnippetDetail.as_view()),

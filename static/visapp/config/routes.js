@@ -14,6 +14,10 @@ visApp.config([
                 controller: "CountiesMapController",
                 templateUrl: "static/visapp/partials/CountiesMap.html"
             })
+            .when("/historical-yields", {
+                controller: "HistoricalYieldsController",
+                templateUrl: "static/visapp/partials/HistoricalYields.html"
+            })
             .when("/tech-used", {
                 controller: "TechnologiesUsedController",
                 templateUrl: "static/visapp/partials/TechUsed.html"

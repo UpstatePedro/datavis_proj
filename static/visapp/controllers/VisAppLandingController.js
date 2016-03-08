@@ -8,7 +8,6 @@
         $scope,
         $location) {
 
-            $scope.tester = "lalalalalala!"
 
     }])
 

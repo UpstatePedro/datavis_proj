@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'us_counties',
     'django.contrib.gis',
     'rest_framework',
+    'rest_framework_gis',
 ]
 
 MIDDLEWARE_CLASSES = [

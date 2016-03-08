@@ -24,7 +24,7 @@
   background-color: var(--top-level-site-bg);
   color: var(--top-level-site-txt);
   height: var(--header-height);
-  font-size: 3em;
+  font-size: 2em;
 }
 
 .main-body {
@@ -64,4 +64,39 @@ li.nav-option > a:hover {
 }
 .thumbnail#clusters {
   background: linear-gradient( to left top, var(--thumbnail-shade-4), var(--thumbnail-shade-2));
+}
+
+/* D3 Charting */
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.line {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 2px;
+}
+
+.brush .extent {
+  stroke: #fff;
+  fill-opacity: .25;
+  shape-rendering: crispEdges;
+}
+
+.overlay {
+  fill: none;
+  pointer-events: all;
+}
+
+.circle {
+  fill: rgba(240, 204, 207, 0.4);
+  stroke: #293FBA;
+  stroke-width: 1px;
+}
+
+.tracker-text text {
+  color: #293FBA;
 }
