@@ -74,6 +74,13 @@ li.nav-option > a:hover {
   shape-rendering: crispEdges;
 }
 
+
+
+path {
+  fill: none;
+  stroke: rgb(49, 50, 21);
+}
+
 .line {
   fill: none;
   stroke: steelblue;
