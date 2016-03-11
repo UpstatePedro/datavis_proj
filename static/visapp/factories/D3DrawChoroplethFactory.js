@@ -24,10 +24,10 @@
 
                 // ********************************
                 // Define variables & static config
-                var svgHeight = 400,
-                    margin = {top: 5, right: 5, bottom: 10, left: 50},
+                var svgHeight = 450,
+                    margin = {top: 5, right: 5, bottom: 10, left: 100},
                     height = svgHeight - margin.top - margin.bottom,
-                    width = 650 - margin.left - margin.right
+                    width = 750 - margin.left - margin.right
 
                 var projection = d3.geo.albersUsa()
                     .scale(1)
@@ -48,7 +48,8 @@
 
                 var svg = d3.select("div.map-container").append("svg")
                             .attr("width", width)
-                            .attr("height", height);
+                            .attr("height", height)
+                            //.attr("transform", "translate("+ margin.left +"," + margin.top + ")")
 
 
                 svg.append("g")

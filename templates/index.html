@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+{% load staticfiles %}
+
+<html lang="en" ng-app="VisApp">
+<head>
+    <meta charset="UTF-8">
+    <title>TDV</title>
+
+    {#  Stylesheets  #}
+    <link rel="stylesheet" href="{% static 'lib/bower_components/bootstrap/dist/css/bootstrap.min.css' %}" media="screen">
+    <link rel="stylesheet" href="{% static "styling/visapp/visapp.css" %}" />
+    {#  Third party packages  #}
+    {% include "lib_dependencies.html" %}
+    {#  App scripts  #}
+    {% include "visapp_dependencies.html" %}
+
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="application-header navbar navbar-fixed-top">
+            <div class="row">
+                AgriVis: Test-Driven Visualisation with Django & Angular
+            </div>
+        </div>
+
+        <div class="row main-body">
+            <div class="col-md-3 sidebar">
+                <nav>
+                    <ul class="nav nav-pills nav-stacked">
+                      <li role="presentation" id="Home" class="nav-option text-center"><a href="{{ base_url }}/#/">Home</a></li>
+                      <li role="presentation" id="Counties-map" class="nav-option text-center"><a href="{{ base_url }}/#/us-counties-map">Counties Map</a></li>
+                      <li role="presentation" id="Historical yields" class="nav-option text-center"><a href="{{ base_url }}/#/historical-yields">Historical yields</a></li>
+                      <li role="presentation" id="Nav-3" class="nav-option text-center"><a href="{{ base_url }}/#/tech-used">Technologies used</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="col-md-9" ng-view>
+
+            </div>
+        </div>
+
+        <div class="row application-footer navbar navbar-fixed-bottom">
+            <div class="col-md-12">
+                This is the Footer
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

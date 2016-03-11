@@ -18,7 +18,7 @@ from django.conf.urls import url
 from django.contrib.gis import admin
 from rest_framework.urlpatterns import format_suffix_patterns
 
-from us_counties import views
+from geo_borders import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -26,11 +26,8 @@ urlpatterns = [
 
 urlpatterns += [
     url(r'^$', views.index, name='index'),
-    url(r'^county-borders/$', views.CountyBorderList.as_view()),
+    url(r'^api/county-borders/$', views.CountyBorderList.as_view()),
     url(r'^api/state/(?P<state>[0-9]+)/county-borders/$', views.CountyBorderListByState.as_view()),
-
-
-    # url(r'^county-borders/(?P<pk>[0-9]+)/$', views.SnippetDetail.as_view()),
 ]
 
 urlpatterns = format_suffix_patterns(urlpatterns)
