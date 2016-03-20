@@ -17,12 +17,7 @@
 
         $scope.state_county_boundaries = null
 
-        //StateCountiesBoundariesFactory.get({state: ''}, function(success) {
-        //    $scope.state_county_boundaries = success;
-        //    D3DrawChoroplethFactory.state_choropleth($scope.state_county_boundaries);
-        //})
-
-        AllCountiesBoundariesFactory.get(function(success) {
+        StateCountiesBoundariesFactory.get({state: '34'}, function(success) {
             $scope.state_county_boundaries = success;
             D3DrawChoroplethFactory.state_choropleth($scope.state_county_boundaries);
         })

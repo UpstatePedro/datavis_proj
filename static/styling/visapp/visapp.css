@@ -30,6 +30,7 @@
 .main-body {
   margin-top: var(--header-height);
   padding-top: 20px;
+  padding-bottom: 90px;
 }
 
 .nav-option {
@@ -64,6 +65,10 @@ li.nav-option > a:hover {
 }
 .thumbnail#clusters {
   background: linear-gradient( to left top, var(--thumbnail-shade-4), var(--thumbnail-shade-2));
+}
+
+.caption {
+  text-align: center;
 }
 
 /* D3 Charting */

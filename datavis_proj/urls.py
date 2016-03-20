@@ -26,8 +26,11 @@ urlpatterns = [
 
 urlpatterns += [
     url(r'^$', views.index, name='index'),
-    url(r'^api/county-borders/$', views.CountyBorderList.as_view()),
-    url(r'^api/state/(?P<state>[0-9]+)/county-borders/$', views.CountyBorderListByState.as_view()),
+    url(r'^technology/$', views.technology_used, name='technology'),
+    url(r'^api/county-borders/$', views.UsCountyBorderList.as_view()),
+    url(r'^api/state/(?P<state>[0-9]+)/county-borders/$', views.UsCountyBorderListByState.as_view()),
+    url(r'^api/states/$', views.UsStateBorderList.as_view()),
+    url(r'^api/states/(?P<state>[0-9]+)/$', views.UsStateBorderDetail.as_view()),
 ]
 
 urlpatterns = format_suffix_patterns(urlpatterns)

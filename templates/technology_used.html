@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+{% load staticfiles %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TDV</title>
+
+    {#  Stylesheets  #}
+    <link rel="stylesheet" href="{% static 'lib/bower_components/bootstrap/dist/css/bootstrap.min.css' %}" media="screen">
+    <link rel="stylesheet" href="{% static "styling/visapp/visapp.css" %}" />
+
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="application-header navbar navbar-fixed-top">
+            <div class="row">
+                AgriVis: Test-Driven Visualisation with Django & Angular
+            </div>
+            <div class="row">
+                <a href="{% url 'index' %}"><button class="btn btn-info">Return to visualisation</button></a>
+            </div>
+        </div>
+
+        <div class="main-body">
+
+            <div class="row">
+                <div class="col-sm-12 col-md-4">
+                    <div class="thumbnail">
+                        <img src="{% static "images/python.png" %}" alt="Django" style="height: 80px;">
+                        <div class="caption">
+                            <h3>Python 2.7</h3>
+                            <p>Dynamically typed, interpreted language on which the popular Django Web Framework is
+                                built</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-12 col-md-4">
+                    <div class="thumbnail">
+                        <img src="{% static "images/django.png" %}" alt="Django" style="height: 80px;">
+                        <div class="caption">
+                            <h3>Django Web Framework (1.9)</h3>
+                            <p>Popular web framework built on the Python language; highly productive & configurable</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-12 col-md-4">
+                    <div class="thumbnail">
+                        <img src="{% static "images/DRF.png" %}" alt="Django Rest Framework" style="height: 80px;">
+                        <div class="caption">
+                            <h3>Django RestFramework (3.3)</h3>
+                            <p>Django extension, used to build RESTful APIs</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-12 col-md-4">
+                    <div class="thumbnail">
+                        <img src="{% static "images/PostGIS.png" %}" alt="PostGIS" style="height: 80px;">
+                        <div class="caption">
+                            <h3>PostGIS</h3>
+                            <p>Geospatial extension to the PostgreSQL RDBMS</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-12 col-md-4">
+                    <div class="thumbnail">
+                        <img src="{% static "images/AngularJS.png" %}" alt="AngularJS" style="height: 80px;">
+                        <div class="caption">
+                            <h3>AngularJS</h3>
+                            <p>JS library used to build interactive & responsive front-end applications</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-12 col-md-4">
+                    <div class="thumbnail">
+                        <img src="{% static "images/Bootstrap.png" %}" alt="Bootstrap" style="height: 80px;">
+                        <div class="caption">
+                            <h3>Bootstrap</h3>
+                            <p>CSS library for simple HTML styling</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-12 col-md-12">
+                    <div class="thumbnail">
+                        <img src="{% static "images/d3.png" %}" alt="D3.js" style="height: 80px;">
+                        <div class="caption">
+                            <h3>D3.js</h3>
+                            <p>JavaScript Visualisation library - interactive visualisations for web-applications</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row application-footer navbar navbar-fixed-bottom">
+            <div class="col-md-12">
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
+
+

@@ -10,6 +10,10 @@ visApp.config([
                 controller: "VisAppLandingController",
                 templateUrl: "static/visapp/partials/VisAppLanding.html"
             })
+            .when("/us-states-map", {
+                controller: "StatesMapController",
+                templateUrl: "static/visapp/partials/StatesMap.html"
+            })
             .when("/us-counties-map", {
                 controller: "CountiesMapController",
                 templateUrl: "static/visapp/partials/CountiesMap.html"
@@ -17,10 +21,6 @@ visApp.config([
             .when("/historical-yields", {
                 controller: "HistoricalYieldsController",
                 templateUrl: "static/visapp/partials/HistoricalYields.html"
-            })
-            .when("/tech-used", {
-                controller: "TechnologiesUsedController",
-                templateUrl: "static/visapp/partials/TechUsed.html"
             })
             .otherwise({
                 redirectTo: '/'

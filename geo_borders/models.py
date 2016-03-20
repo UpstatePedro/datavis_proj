@@ -17,3 +17,19 @@ class UsCountyBorder(models.Model):
 
     def __unicode__(self):
         return self.name
+
+
+class UsStateBorder(models.Model):
+    statefp = models.CharField(max_length=2)
+    statens = models.CharField(max_length=8)
+    affgeoid = models.CharField(max_length=11)
+    geoid = models.CharField(max_length=2)
+    stusps = models.CharField(max_length=2)
+    name = models.CharField(max_length=100)
+    lsad = models.CharField(max_length=2)
+    aland = models.FloatField()
+    awater = models.FloatField()
+    geom = models.MultiPolygonField(srid=4269)
+
+    def __unicode__(self):
+        return self.name
