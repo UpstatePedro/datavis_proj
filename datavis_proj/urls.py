@@ -31,6 +31,7 @@ urlpatterns += [
     url(r'^api/state/(?P<state>[0-9]+)/county-borders/$', views.UsCountyBorderListByState.as_view()),
     url(r'^api/states/$', views.UsStateBorderList.as_view()),
     url(r'^api/states/(?P<state>[0-9]+)/$', views.UsStateBorderDetail.as_view()),
+    url(r'^api/states-search/long/(?P<long>-*[0-9]+\.[0-9]+)/lat/(?P<lat>-*[0-9]+\.[0-9]+)/$', views.StateSearch.as_view()),
 ]
 
 urlpatterns = format_suffix_patterns(urlpatterns)

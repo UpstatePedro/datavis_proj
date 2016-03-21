@@ -1,3 +1,4 @@
+from django.contrib.gis.geos.geometry import GEOSGeometry
 from django.shortcuts import render
 from rest_framework.response import Response
 from rest_framework.views import APIView
@@ -52,10 +53,24 @@ class UsStateBorderList(APIView):
 
 class UsStateBorderDetail(APIView):
     """
-    List all UsCountyBorders
+    Detail a specific US State border
     """
 
     def get(self, request, state, format=None):
         state_border = UsStateBorder.objects.filter(statefp=state)
         serializer = StateBorderSerialiser(state_border, many=True)
         return Response(serializer.data)
+
+class StateSearch(APIView):
+    """
+    List all UsCountyBorders
+    """
+
+    def get(self, request, long, lat, format=None):
+        point = GEOSGeometry('{ "type": "Point", "coordinates": [ '+long+', '+lat+' ] }')
+        print point
+        state = UsStateBorder.objects.filter(geom__contains=point)
+        print state
+        if state:
+            print state[0].name
+        return Response(state[0].name)

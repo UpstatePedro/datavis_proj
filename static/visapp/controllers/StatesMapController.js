@@ -21,10 +21,9 @@
 
         $scope.state_boundaries = null
 
-        StateBoundariesFactory.get({state: '34'}, function(success) {
+        StateBoundariesFactory.get(function(success) {
             $scope.state_boundaries = success;
-            D3DrawChoroplethFactory.state_choropleth($scope.state_boundaries, $scope.filteredCornData);
-            console.log(success)
+            D3DrawChoroplethFactory.state_choropleth($scope.state_boundaries, $scope.filteredCornData, "state");
         })
 
         function extractAnnualData(obj) {

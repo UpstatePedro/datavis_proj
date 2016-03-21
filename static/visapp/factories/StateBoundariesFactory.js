@@ -3,10 +3,8 @@
 
     visApp.factory('StateBoundariesFactory', [
         '$resource',
-    function(
-        $resource) {
-
+        function($resource) {
             return $resource('api/states/');
-
-    }])
+        }
+    ])
 })();
