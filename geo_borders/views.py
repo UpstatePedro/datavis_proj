@@ -68,9 +68,9 @@ class StateSearch(APIView):
 
     def get(self, request, long, lat, format=None):
         point = GEOSGeometry('{ "type": "Point", "coordinates": [ '+long+', '+lat+' ] }')
-        print point
         state = UsStateBorder.objects.filter(geom__contains=point)
-        print state
-        if state:
-            print state[0].name
-        return Response(state[0].name)
+        context = {
+            'state_name': state[0].name,
+            'statefp': state[0].statefp
+        }
+        return Response(context)

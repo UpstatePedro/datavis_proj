@@ -2,13 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c8b2dc87-18bc-440d-82a6-3bc11fb38541" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/datavis_proj/urls.py" afterPath="$PROJECT_DIR$/datavis_proj/urls.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/visapp/factories/SearchStatesFactory.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geo_borders/views.py" afterPath="$PROJECT_DIR$/geo_borders/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/visapp/config/routes.js" afterPath="$PROJECT_DIR$/static/visapp/config/routes.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/visapp/controllers/CountiesMapController.js" afterPath="$PROJECT_DIR$/static/visapp/controllers/CountiesMapController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/visapp/controllers/StatesMapController.js" afterPath="$PROJECT_DIR$/static/visapp/controllers/StatesMapController.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/visapp/factories/D3DrawChoroplethFactory.js" afterPath="$PROJECT_DIR$/static/visapp/factories/D3DrawChoroplethFactory.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/visapp/factories/StateBoundariesFactory.js" afterPath="$PROJECT_DIR$/static/visapp/factories/StateBoundariesFactory.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/visapp_dependencies.html" afterPath="$PROJECT_DIR$/templates/visapp_dependencies.html" />
     </list>
     <ignored path="datavis_proj.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -33,31 +31,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="StatesMapController.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="StatesMapController.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/visapp/controllers/StatesMapController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.55309737">
+            <state vertical-scroll-proportion="0.0">
               <caret line="25" column="18" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="D3DrawChoroplethFactory.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="D3DrawChoroplethFactory.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/static/visapp/factories/D3DrawChoroplethFactory.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="132" column="50" selection-start-line="132" selection-start-column="50" selection-end-line="132" selection-end-column="50" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="routes.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/visapp/config/routes.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="16" column="44" selection-start-line="16" selection-start-column="44" selection-end-line="16" selection-end-column="44" />
+            <state vertical-scroll-proportion="0.6902655">
+              <caret line="147" column="38" selection-start-line="147" selection-start-column="38" selection-end-line="147" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -67,17 +55,7 @@
         <entry file="file://$PROJECT_DIR$/static/visapp/controllers/CountiesMapController.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="25" column="65" selection-start-line="25" selection-start-column="65" selection-end-line="25" selection-end-column="65" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/datavis_proj/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="33" column="75" selection-start-line="33" selection-start-column="75" selection-end-line="33" selection-end-column="75" />
+              <caret line="25" column="66" selection-start-line="25" selection-start-column="66" selection-end-line="28" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -87,10 +65,20 @@
         <entry file="file://$PROJECT_DIR$/geo_borders/views.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="72" column="19" selection-start-line="72" selection-start-column="19" selection-end-line="72" selection-end-column="19" />
+              <caret line="75" column="31" selection-start-line="75" selection-start-column="31" selection-end-line="75" selection-end-column="31" />
               <folding>
                 <element signature="e#0#57#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/datavis_proj/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="33" column="34" selection-start-line="33" selection-start-column="11" selection-end-line="33" selection-end-column="34" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -101,8 +89,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
-        <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -112,7 +100,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/county_borders/serialisers/CountyBorderSerialiser.py" />
         <option value="$PROJECT_DIR$/county_borders/serialisers/CountyBorderListSerialiser.py" />
         <option value="$PROJECT_DIR$/apps/county_borders/views.py" />
         <option value="$PROJECT_DIR$/county_borders/views.py" />
@@ -148,7 +135,6 @@
         <option value="$PROJECT_DIR$/geo_borders/serialisers/StateBorderSerialiser.py" />
         <option value="$PROJECT_DIR$/geo_borders/models.py" />
         <option value="$PROJECT_DIR$/static/visapp/partials/StatesMap.html" />
-        <option value="$PROJECT_DIR$/templates/visapp_dependencies.html" />
         <option value="$PROJECT_DIR$/static/visapp/partials/VisAppLanding.html" />
         <option value="$PROJECT_DIR$/static/visapp/controllers/HistoricalYieldsController.js" />
         <option value="$PROJECT_DIR$/static/visapp/partials/TechUsed.html" />
@@ -158,11 +144,13 @@
         <option value="$PROJECT_DIR$/templates/technology_used.html" />
         <option value="$PROJECT_DIR$/static/visapp/factories/StateBoundariesFactory.js" />
         <option value="$PROJECT_DIR$/static/visapp/controllers/StatesMapController.js" />
-        <option value="$PROJECT_DIR$/geo_borders/views.py" />
         <option value="$PROJECT_DIR$/datavis_proj/urls.py" />
-        <option value="$PROJECT_DIR$/static/visapp/factories/D3DrawChoroplethFactory.js" />
         <option value="$PROJECT_DIR$/static/visapp/config/routes.js" />
         <option value="$PROJECT_DIR$/static/visapp/controllers/CountiesMapController.js" />
+        <option value="$PROJECT_DIR$/templates/visapp_dependencies.html" />
+        <option value="$PROJECT_DIR$/static/visapp/factories/SearchStatesFactory.js" />
+        <option value="$PROJECT_DIR$/geo_borders/views.py" />
+        <option value="$PROJECT_DIR$/static/visapp/factories/D3DrawChoroplethFactory.js" />
       </list>
     </option>
   </component>
@@ -721,9 +709,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26171243" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26171243" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -891,13 +879,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/visapp/factories/AllCountiesBoundariesFactory.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.06637168">
-          <caret line="3" column="48" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/geo_borders/admin.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.088495575">
@@ -964,21 +945,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="3" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/visapp/factories/StateCountiesBoundariesFactory.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.06637168">
-          <caret line="3" column="50" selection-start-line="0" selection-start-column="0" selection-end-line="11" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/visapp_dependencies.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36697248">
-          <caret line="16" column="48" selection-start-line="16" selection-start-column="48" selection-end-line="16" selection-end-column="48" />
           <folding />
         </state>
       </provider>
@@ -1105,62 +1071,92 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/geo_borders/models.py">
+    <entry file="file://$PROJECT_DIR$/static/visapp/factories/AllCountiesBoundariesFactory.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6858407">
-          <caret line="31" column="8" selection-start-line="31" selection-start-column="4" selection-end-line="31" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#39#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/geo_borders/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="72" column="19" selection-start-line="72" selection-start-column="19" selection-end-line="72" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#57#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/datavis_proj/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="33" column="75" selection-start-line="33" selection-start-column="75" selection-end-line="33" selection-end-column="75" />
+        <state vertical-scroll-proportion="0.06637168">
+          <caret line="3" column="48" selection-start-line="0" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/visapp/controllers/CountiesMapController.js">
+    <entry file="file://$PROJECT_DIR$/templates/visapp_dependencies.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="25" column="65" selection-start-line="25" selection-start-column="65" selection-end-line="25" selection-end-column="65" />
+        <state vertical-scroll-proportion="0.13761468">
+          <caret line="6" column="60" selection-start-line="6" selection-start-column="60" selection-end-line="6" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/visapp/factories/StateCountiesBoundariesFactory.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.17699115">
+          <caret line="8" column="41" selection-start-line="8" selection-start-column="41" selection-end-line="8" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/geo_borders/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6415929">
+          <caret line="31" column="8" selection-start-line="31" selection-start-column="4" selection-end-line="31" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/visapp/factories/SearchStatesFactory.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.17699115">
+          <caret line="8" column="69" selection-start-line="8" selection-start-column="69" selection-end-line="8" selection-end-column="69" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/static/visapp/config/routes.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.3539823">
           <caret line="16" column="44" selection-start-line="16" selection-start-column="44" selection-end-line="16" selection-end-column="44" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/visapp/factories/D3DrawChoroplethFactory.js">
+    <entry file="file://$PROJECT_DIR$/datavis_proj/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="132" column="50" selection-start-line="132" selection-start-column="50" selection-end-line="132" selection-end-column="50" />
+          <caret line="33" column="34" selection-start-line="33" selection-start-column="11" selection-end-line="33" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/geo_borders/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="75" column="31" selection-start-line="75" selection-start-column="31" selection-end-line="75" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#57#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/visapp/controllers/CountiesMapController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="25" column="66" selection-start-line="25" selection-start-column="66" selection-end-line="28" selection-end-column="10" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/static/visapp/controllers/StatesMapController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.55309737">
+        <state vertical-scroll-proportion="0.0">
           <caret line="25" column="18" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/visapp/factories/D3DrawChoroplethFactory.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6902655">
+          <caret line="147" column="38" selection-start-line="147" selection-start-column="38" selection-end-line="147" selection-end-column="38" />
           <folding />
         </state>
       </provider>

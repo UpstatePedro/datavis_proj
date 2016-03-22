@@ -1,7 +1,15 @@
 (function() {
     'use strict';
 
-    visApp.factory('D3DrawChoroplethFactory', ['$rootScope', '$location', function($rootScope, $location) {
+    visApp.factory('D3DrawChoroplethFactory', [
+        '$rootScope',
+        '$location',
+        'SearchStatesFactory',
+    function(
+        $rootScope,
+        $location,
+        SearchStatesFactory) {
+
         return {
             state_choropleth: function (border_data, plotting_data, type) {
                 console.log(type);
@@ -130,9 +138,15 @@
                 // http://stackoverflow.com/questions/10884886/d3js-how-to-get-lat-log-geocoordinates-from-mouse-click
                 // http://stackoverflow.com/questions/19499323/location-path-doesnt-change-in-a-factory-with-angularjs
                 function clicked(d) {
-                    console.log(projection.invert(path.centroid(d)));
-                    $location.path("/us-counties-map");
-                    $rootScope.$apply()
+                    $rootScope.selectedStateCoordinates = projection.invert(path.centroid(d))
+                    SearchStatesFactory.get({long: $rootScope.selectedStateCoordinates[0],
+                                             lat: $rootScope.selectedStateCoordinates[1]},
+                        function(success_data) {
+                            console.log("Success!")
+                            console.log(success_data);
+                            $location.path("/us-counties-map/"+ success_data.statefp);
+                            $rootScope.$apply()
+                    })
                 }
             }
         }
