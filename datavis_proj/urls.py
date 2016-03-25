@@ -14,24 +14,15 @@ Including another URLconf
     2. Import the include() function: from django.conf.urls import url, include
     3. Add a URL to urlpatterns:  url(r'^blog/', include(blog_urls))
 """
-from django.conf.urls import url
+from django.conf.urls import url, include
 from django.contrib.gis import admin
-from rest_framework.urlpatterns import format_suffix_patterns
 
-from geo_borders import views
+from datavis_proj import views
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
-]
-
-urlpatterns += [
     url(r'^$', views.index, name='index'),
+    url(r'^admin/', admin.site.urls),
     url(r'^technology/$', views.technology_used, name='technology'),
-    url(r'^api/county-borders/$', views.UsCountyBorderList.as_view()),
-    url(r'^api/state/(?P<state>[0-9]+)/county-borders/$', views.UsCountyBorderListByState.as_view()),
-    url(r'^api/states/$', views.UsStateBorderList.as_view()),
-    url(r'^api/states/(?P<state>[0-9]+)/$', views.UsStateBorderDetail.as_view()),
-    url(r'^api/states-search/long/(?P<long>-*[0-9]+\.[0-9]+)/lat/(?P<lat>-*[0-9]+\.[0-9]+)/$', views.StateSearch.as_view()),
+    url(r'^api/borders/', include('geo_borders.urls')),
+    url(r'^api/yield-data/', include('yield_data.urls')),
 ]
-
-urlpatterns = format_suffix_patterns(urlpatterns)

@@ -17,7 +17,7 @@ class AbstractCropYield(models.Model):
         abstract = True
 
     def __unicode__(self):
-        return "%s (%s): %f (%s)" % (self.region_name, self.region_category, self.yield_value, self.yield_unit)
+        return "%s - %s (%s): %f (%s)" % (self.year, self.region_name, self.region_category, self.yield_value, self.yield_unit)
 
 
 class StateCropYield(AbstractCropYield):
@@ -28,3 +28,5 @@ class StateCropYield(AbstractCropYield):
 class CountyCropYield(AbstractCropYield):
     county_code = models.IntegerField()
     county_boundary_ref = models.ForeignKey(UsCountyBorder)
+    state_fips_code = models.IntegerField()
+

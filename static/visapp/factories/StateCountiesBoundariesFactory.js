@@ -6,7 +6,7 @@
     function(
         $resource) {
 
-            return $resource('api/state/:state/county-borders');
+            return $resource('api/borders/state/:state/county-borders/');
 
     }])
 })();

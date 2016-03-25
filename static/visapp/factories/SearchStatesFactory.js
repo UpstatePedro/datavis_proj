@@ -6,7 +6,7 @@
     function(
         $resource) {
 
-            return $resource('api/states-search/long/:long/lat/:lat/');
+            return $resource('api/borders/states-search/long/:long/lat/:lat/');
 
     }])
 })();
