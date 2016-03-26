@@ -14,7 +14,7 @@ visApp.config([
                 controller: "StatesMapController",
                 templateUrl: "static/visapp/partials/StatesMap.html"
             })
-            .when("/us-counties-map/:statefp", {
+            .when("/us-counties-map/state/:statefp/year/:year/crop/:crop/", {
                 controller: "CountiesMapController",
                 templateUrl: "static/visapp/partials/CountiesMap.html"
             })

@@ -1,3 +1,26 @@
+<div class="row">
+
+    <div class="col-lg-6 col-md-6 col-sm-6">
+        <label for="year_selection"> Year: </label>
+        <select name="year_selection"
+                ng-model="filterYear"
+                ng-options="item for item in yearArray"
+                ng-change="refreshPage(filterYear, crop_name, state_boundaries, cropData)">
+        </select>
+    </div>
+
+    <div class="col-lg-6 col-md-6 col-sm-6">
+        <label for="crop_selection"> Crop: </label>
+        <select name="crop_selection"
+                ng-model="crop_name"
+                ng-change="refreshPage(filterYear, crop_name, state_boundaries, cropData)">
+          <option value="corn">Corn</option>
+          <option value="soy">Soybean</option>
+          <option value="wheat">Wheat</option>
+        </select>
+    </div>
+</div>
+
 <div class="row map-container">
 
 

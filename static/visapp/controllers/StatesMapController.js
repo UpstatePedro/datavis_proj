@@ -3,48 +3,84 @@
 
     visApp.controller('StatesMapController', [
         '$scope',
+        '$rootScope',
         '$location',
         'StateBoundariesFactory',
         'AllStatesYieldDataFactory',
         'D3DrawChoroplethFactory',
-        'CornYieldDataFactory',
+        'AvailableYieldYearsFactory',
     function(
         $scope,
+        $rootScope,
         $location,
         StateBoundariesFactory,
         AllStatesYieldDataFactory,
         D3DrawChoroplethFactory,
-        CornYieldDataFactory
+        AvailableYieldYearsFactory
     ) {
+        $scope.showSelections = true;
 
-        $scope.filterYear = 2012;
-        $scope.cropData = AllStatesYieldDataFactory.query({
-            start_year: $scope.filterYear,
-            end_year: $scope.filterYear,
-            crop_name: 'corn'
-        }, function(success) {
-            console.log("Success - all states yield data factory")
-            console.log(success);
-        }, function(error) {
-            console.log("Error - all states yield data factory")
-            console.log(error);
-        });
-        $scope.cornData = CornYieldDataFactory.corn()
-        $scope.filteredCornData = $scope.cornData.filter(extractAnnualData)
-        console.log("$scope.filteredCornData");
-        console.log($scope.filteredCornData);
+        $scope.state_boundaries = null;
 
-        $scope.state_boundaries = null
+        //$scope.yearArray = extractYears($scope.year_range.min, $scope.year_range.max);
+        getYears($scope, $rootScope);
+        $scope.cropData = {};
+        $scope.crop_name = 'corn';
+        $scope.filterYear = '2000';
 
-        StateBoundariesFactory.get(function(success) {
-            $scope.state_boundaries = success;
-            D3DrawChoroplethFactory.state_choropleth($scope.state_boundaries, $scope.cropData, "state");
-        })
-
-        function extractAnnualData(obj) {
-            return obj.year === $scope.filterYear
+        function updateData(year, crop, data) {
+            data = AllStatesYieldDataFactory.query({
+                start_year: year,
+                end_year: year,
+                crop_name: crop
+            }, function(success) {
+            }, function(error) {
+            });
+            return data;
         }
 
+        function drawChart(state_boundaries, cropData, year, crop, region_type) {
+            StateBoundariesFactory.get(function(success) {
+                state_boundaries = success;
+                D3DrawChoroplethFactory.state_choropleth(state_boundaries, cropData, year, crop, region_type);
+            })
+        }
+
+        function refreshPage(year, crop, boundaries, data) {
+            data = updateData(year, crop, data)
+            drawChart(boundaries, data, year, crop, "state")
+        }
+        $scope.refreshPage = refreshPage
+        refreshPage($scope.filterYear, $scope.crop_name, $scope.state_boundaries, $scope.cropData)
+
+        function extractYears(min, max) {
+            var yearArray = [];
+            for(var yr = min; yr < max; yr++) {
+                yearArray.push(
+                    yr.toString()
+                )
+            }
+            return yearArray;
+        }
+
+        function getYears(scope, rootScope) {
+            if (rootScope.hasOwnProperty('year_range')) {
+                scope.year_range = rootScope.year_range
+                scope.yearArray = extractYears(scope.year_range.min, scope.year_range.max);
+            } else {
+                AvailableYieldYearsFactory.get(function (success) {
+                    scope.year_range = {}
+                    scope.year_range.min = success.min.year__min;
+                    scope.year_range.max = success.max.year__max;
+                    scope.yearArray = extractYears(scope.year_range.min, scope.year_range.max);
+                }, function(error) {
+                    scope.year_range = {}
+                    scope.year_range.min = 1990;
+                    scope.year_range.max = 2015;
+                    scope.yearArray = extractYears(scope.year_range.min, scope.year_range.max);
+                });
+            }
+        }
     }])
 
 })();

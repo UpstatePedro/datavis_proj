@@ -2,32 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c8b2dc87-18bc-440d-82a6-3bc11fb38541" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datavis_proj/views.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geo_borders/urls.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/visapp/factories/AllStatesYieldDataFactory.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/visapp/factories/StateCountiesYieldDataFactory.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/yield_data/data/additional_yield_data.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/yield_data/serialisers/CountyCropYieldListSerialiser.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/yield_data/serialisers/StateCropYieldListSerialiser.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/yield_data/serialisers/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/yield_data/urls.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/visapp/factories/AvailableYieldYearsFactory.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/datavis_proj/urls.py" afterPath="$PROJECT_DIR$/datavis_proj/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geo_borders/data_tools/load_counties_shp.py" afterPath="$PROJECT_DIR$/geo_borders/data_tools/load_counties_shp.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geo_borders/views.py" afterPath="$PROJECT_DIR$/geo_borders/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/visapp/config/routes.js" afterPath="$PROJECT_DIR$/static/visapp/config/routes.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/visapp/controllers/CountiesMapController.js" afterPath="$PROJECT_DIR$/static/visapp/controllers/CountiesMapController.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/visapp/controllers/StatesMapController.js" afterPath="$PROJECT_DIR$/static/visapp/controllers/StatesMapController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/visapp/factories/AllCountiesBoundariesFactory.js" afterPath="$PROJECT_DIR$/static/visapp/factories/AllCountiesBoundariesFactory.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/visapp/controllers/VisAppLandingController.js" afterPath="$PROJECT_DIR$/static/visapp/controllers/VisAppLandingController.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/visapp/factories/D3DrawChoroplethFactory.js" afterPath="$PROJECT_DIR$/static/visapp/factories/D3DrawChoroplethFactory.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/visapp/factories/SearchStatesFactory.js" afterPath="$PROJECT_DIR$/static/visapp/factories/SearchStatesFactory.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/visapp/factories/StateBoundariesFactory.js" afterPath="$PROJECT_DIR$/static/visapp/factories/StateBoundariesFactory.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/visapp/factories/StateCountiesBoundariesFactory.js" afterPath="$PROJECT_DIR$/static/visapp/factories/StateCountiesBoundariesFactory.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/visapp/partials/CountiesMap.html" afterPath="$PROJECT_DIR$/static/visapp/partials/CountiesMap.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/visapp/partials/StatesMap.html" afterPath="$PROJECT_DIR$/static/visapp/partials/StatesMap.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/index.html" afterPath="$PROJECT_DIR$/templates/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/visapp_dependencies.html" afterPath="$PROJECT_DIR$/templates/visapp_dependencies.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/yield_data/__init__.py" afterPath="$PROJECT_DIR$/yield_data/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/yield_data/data/yield_data.csv" afterPath="$PROJECT_DIR$/yield_data/data/yield_data.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/yield_data/data_tools/load_yield_data_csv.py" afterPath="$PROJECT_DIR$/yield_data/data_tools/load_yield_data_csv.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/yield_data/models.py" afterPath="$PROJECT_DIR$/yield_data/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/yield_data/serialisers/CountyCropYieldListSerialiser.py" afterPath="$PROJECT_DIR$/yield_data/serialisers/CountyCropYieldListSerialiser.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/yield_data/serialisers/StateCropYieldListSerialiser.py" afterPath="$PROJECT_DIR$/yield_data/serialisers/StateCropYieldListSerialiser.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/yield_data/urls.py" afterPath="$PROJECT_DIR$/yield_data/urls.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/yield_data/views.py" afterPath="$PROJECT_DIR$/yield_data/views.py" />
     </list>
     <ignored path="datavis_proj.iws" />
@@ -56,21 +44,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="StatesMapController.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/static/visapp/controllers/StatesMapController.js">
+      <file leaf-file-name="D3DrawChoroplethFactory.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/static/visapp/factories/D3DrawChoroplethFactory.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.2662722">
-              <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CountiesMapController.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/visapp/controllers/CountiesMapController.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="20" column="54" selection-start-line="20" selection-start-column="54" selection-end-line="20" selection-end-column="54" />
+            <state vertical-scroll-proportion="0.82100594">
+              <caret line="47" column="36" selection-start-line="47" selection-start-column="36" selection-end-line="47" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -93,15 +71,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/us_counties/serialisers/CountyBorderListSerialiser.py" />
-        <option value="$PROJECT_DIR$/static/visapp/controllers/VisAppLandingController.js" />
         <option value="$PROJECT_DIR$/us_counties/templates/us_counties/index.html" />
         <option value="$PROJECT_DIR$/static/visapp/factories/SoyYieldDataFactory.js" />
         <option value="$PROJECT_DIR$/static/visapp/partials/HistoricalYields.html" />
         <option value="$PROJECT_DIR$/static/visapp/factories/CornYieldDataFactory.js" />
         <option value="$PROJECT_DIR$/static/visapp/factories/WheatYieldDataFactory.js" />
         <option value="$PROJECT_DIR$/static/visapp/factories/HistoricalYieldChartFactory.js" />
-        <option value="$PROJECT_DIR$/static/visapp/partials/CountiesMap.html" />
         <option value="$PROJECT_DIR$/us_counties/templates/us_counties/visapp_dependencies.html" />
         <option value="$PROJECT_DIR$/geo_borders/data_tools/load_shp.py" />
         <option value="$PROJECT_DIR$/geo_borders/serialisers/CountyBorderListSerialiser.py" />
@@ -109,14 +84,11 @@
         <option value="$PROJECT_DIR$/geo_borders/data_tools/load_states_shp.py" />
         <option value="$PROJECT_DIR$/geo_borders/serialisers/StateBorderSerialiser.py" />
         <option value="$PROJECT_DIR$/geo_borders/models.py" />
-        <option value="$PROJECT_DIR$/static/visapp/partials/StatesMap.html" />
         <option value="$PROJECT_DIR$/static/visapp/partials/VisAppLanding.html" />
         <option value="$PROJECT_DIR$/static/visapp/controllers/HistoricalYieldsController.js" />
         <option value="$PROJECT_DIR$/static/visapp/partials/TechUsed.html" />
         <option value="$PROJECT_DIR$/technology/views.py" />
-        <option value="$PROJECT_DIR$/static/styling/visapp/visapp.css" />
         <option value="$PROJECT_DIR$/templates/technology_used.html" />
-        <option value="$PROJECT_DIR$/static/visapp/config/routes.js" />
         <option value="$PROJECT_DIR$/datavis_proj/settings.py" />
         <option value="$PROJECT_DIR$/geo_borders/data_tools/load_counties_shp.py" />
         <option value="$PROJECT_DIR$/yield_data/__init__.py" />
@@ -129,20 +101,26 @@
         <option value="$PROJECT_DIR$/datavis_proj/urls.py" />
         <option value="$PROJECT_DIR$/yield_data/models.py" />
         <option value="$PROJECT_DIR$/yield_data/data_tools/add_state_fips_to_counties.py" />
-        <option value="$PROJECT_DIR$/templates/index.html" />
         <option value="$PROJECT_DIR$/static/visapp/factories/CountyStateYieldDataFactory.js" />
-        <option value="$PROJECT_DIR$/yield_data/urls.py" />
-        <option value="$PROJECT_DIR$/yield_data/views.py" />
         <option value="$PROJECT_DIR$/static/visapp/factories/StateYieldDataFactory.js" />
         <option value="$PROJECT_DIR$/static/visapp/factories/AllStatesYieldDataFactory.js" />
-        <option value="$PROJECT_DIR$/static/visapp/controllers/StatesMapController.js" />
         <option value="$PROJECT_DIR$/yield_data/data_tools/load_yield_data_csv.py" />
-        <option value="$PROJECT_DIR$/templates/visapp_dependencies.html" />
         <option value="$PROJECT_DIR$/static/visapp/factories/StateCountiesYieldDataFactory.js" />
         <option value="$PROJECT_DIR$/static/visapp/factories/StateCountiesBoundariesFactory.js" />
-        <option value="$PROJECT_DIR$/static/visapp/controllers/CountiesMapController.js" />
-        <option value="$PROJECT_DIR$/yield_data/serialisers/CountyCropYieldListSerialiser.py" />
+        <option value="$PROJECT_DIR$/templates/index.html" />
+        <option value="$PROJECT_DIR$/static/visapp/config/routes.js" />
         <option value="$PROJECT_DIR$/yield_data/serialisers/StateCropYieldListSerialiser.py" />
+        <option value="$PROJECT_DIR$/yield_data/serialisers/CountyCropYieldListSerialiser.py" />
+        <option value="$PROJECT_DIR$/static/styling/visapp/visapp.css" />
+        <option value="$PROJECT_DIR$/yield_data/urls.py" />
+        <option value="$PROJECT_DIR$/yield_data/views.py" />
+        <option value="$PROJECT_DIR$/static/visapp/factories/AvailableYieldYearsFactory.js" />
+        <option value="$PROJECT_DIR$/templates/visapp_dependencies.html" />
+        <option value="$PROJECT_DIR$/static/visapp/controllers/VisAppLandingController.js" />
+        <option value="$PROJECT_DIR$/static/visapp/partials/StatesMap.html" />
+        <option value="$PROJECT_DIR$/static/visapp/partials/CountiesMap.html" />
+        <option value="$PROJECT_DIR$/static/visapp/controllers/CountiesMapController.js" />
+        <option value="$PROJECT_DIR$/static/visapp/controllers/StatesMapController.js" />
         <option value="$PROJECT_DIR$/static/visapp/factories/D3DrawChoroplethFactory.js" />
       </list>
     </option>
@@ -327,11 +305,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="yield_data" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="serialisers" />
+              <option name="myItemId" value="templates" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -346,6 +320,148 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="visapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="datavis_proj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="datavis_proj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="visapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="partials" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="datavis_proj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="datavis_proj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="visapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="factories" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="datavis_proj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="datavis_proj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="visapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="datavis_proj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="datavis_proj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="visapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="datavis_proj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="datavis_proj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="styling" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="visapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="datavis_proj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="datavis_proj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="datavis_proj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="datavis_proj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="geo_borders" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -747,55 +863,10 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/geo_borders/serialisers/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/geo_borders/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.088495575">
-          <caret line="7" column="33" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/lib_dependencies.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.06880734">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/geo_borders/data_tools/load_states_shp.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.61946905">
-          <caret line="28" column="41" selection-start-line="28" selection-start-column="41" selection-end-line="28" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/geo_borders/data/us_state_borders_20m/cb_2014_us_state_20m.cpg">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/visapp/partials/StatesMap.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.06880734">
-          <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/visapp/partials/CountiesMap.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="3" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -874,14 +945,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/styling/visapp/visapp.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.49760765">
-          <caret line="70" column="20" selection-start-line="70" selection-start-column="20" selection-end-line="70" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/technology_used.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5275229">
@@ -895,14 +958,6 @@
             <element signature="n#style#0;n#img#0;n#div#0;n#div#2;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#2;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/visapp/config/routes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3539823">
-          <caret line="16" column="44" selection-start-line="16" selection-start-column="44" selection-end-line="16" selection-end-column="44" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -956,29 +1011,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/yield_data/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="13" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/yield_data/tests.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/datavis_proj/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="26" column="26" selection-start-line="26" selection-start-column="11" selection-end-line="26" selection-end-column="26" />
-          <folding>
-            <element signature="e#701#742#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1002,24 +1039,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/visapp/factories/SearchStatesFactory.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="11" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/yield_data/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="46" column="30" selection-start-line="46" selection-start-column="30" selection-end-line="46" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#35#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/yield_data/data/additional_yield_data.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1035,34 +1054,6 @@
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/geo_borders/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.17751479">
-          <caret line="8" column="50" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="50" />
-          <folding>
-            <element signature="e#0#32#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/geo_borders/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#57#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/visapp_dependencies.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2760736">
-          <caret line="12" column="70" selection-start-line="12" selection-start-column="70" selection-end-line="12" selection-end-column="70" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1082,16 +1073,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/yield_data/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.15532544">
-          <caret line="7" column="131" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="131" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/visapp/factories/StateCountiesYieldDataFactory.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.17751479">
@@ -1108,60 +1089,194 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5858896">
-          <caret line="43" column="52" selection-start-line="43" selection-start-column="52" selection-end-line="43" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/visapp/controllers/CountiesMapController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="20" column="54" selection-start-line="20" selection-start-column="54" selection-end-line="20" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/yield_data/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.28846154">
           <caret line="13" column="14" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="14" />
           <folding>
-            <element signature="e#0#39#0" expanded="true" />
+            <element signature="e#0#39#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/lib/node_modules/topojson/node_modules/shapefile/test/index-test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yield_data/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.06656805">
+          <caret line="3" column="8" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/geo_borders/data/us_state_borders_20m/cb_2014_us_state_20m.shp.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/geo_borders/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/geo_borders/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1331361">
+          <caret line="8" column="50" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/visapp/config/routes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="61" selection-start-line="16" selection-start-column="57" selection-end-line="16" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.291667">
+          <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/yield_data/serialisers/CountyCropYieldListSerialiser.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.19970414">
-          <caret line="11" column="79" selection-start-line="11" selection-start-column="79" selection-end-line="11" selection-end-column="79" />
+        <state vertical-scroll-proportion="0.1331361">
+          <caret line="8" column="61" selection-start-line="8" selection-start-column="61" selection-end-line="8" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/styling/visapp/visapp.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="7" selection-start-line="0" selection-start-column="7" selection-end-line="0" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/yield_data/serialisers/StateCropYieldListSerialiser.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.19970414">
-          <caret line="11" column="89" selection-start-line="11" selection-start-column="89" selection-end-line="11" selection-end-column="89" />
+        <state vertical-scroll-proportion="0.35502958">
+          <caret line="18" column="18" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/visapp/factories/D3DrawChoroplethFactory.js">
+    <entry file="file://$PROJECT_DIR$/datavis_proj/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.9748521">
-          <caret line="89" column="42" selection-start-line="89" selection-start-column="42" selection-end-line="89" selection-end-column="42" />
+        <state vertical-scroll-proportion="0.5769231">
+          <caret line="26" column="26" selection-start-line="26" selection-start-column="15" selection-end-line="26" selection-end-column="26" />
+          <folding>
+            <element signature="e#701#742#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yield_data/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1331361">
+          <caret line="6" column="26" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#32#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/visapp/factories/SearchStatesFactory.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="11" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yield_data/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8446745">
+          <caret line="87" column="50" selection-start-line="87" selection-start-column="50" selection-end-line="87" selection-end-column="50" />
+          <folding>
+            <element signature="e#0#48#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/visapp/controllers/VisAppLandingController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.28846154">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="21" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/visapp_dependencies.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.36809817">
+          <caret line="16" column="67" selection-start-line="16" selection-start-column="67" selection-end-line="16" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/visapp/factories/AvailableYieldYearsFactory.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.06656805">
+          <caret line="3" column="46" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/visapp/partials/CountiesMap.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1380368">
+          <caret line="6" column="55" selection-start-line="6" selection-start-column="55" selection-end-line="6" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/visapp/partials/StatesMap.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3220859">
+          <caret line="14" column="36" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="36" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/static/visapp/controllers/StatesMapController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2662722">
-          <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
+        <state vertical-scroll-proportion="0.5118343">
+          <caret line="70" column="55" selection-start-line="70" selection-start-column="55" selection-end-line="70" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/visapp/controllers/CountiesMapController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.66715974">
+          <caret line="73" column="55" selection-start-line="73" selection-start-column="55" selection-end-line="73" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/visapp/factories/D3DrawChoroplethFactory.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.82100594">
+          <caret line="47" column="36" selection-start-line="47" selection-start-column="36" selection-end-line="47" selection-end-column="36" />
           <folding />
         </state>
       </provider>

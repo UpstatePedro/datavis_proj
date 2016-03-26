@@ -11,24 +11,23 @@
         SearchStatesFactory) {
 
         return {
-            state_choropleth: function (border_data, plotting_data, type) {
-                console.log(type);
+            state_choropleth: function (border_data, plotting_data, selected_year, selected_crop, type) {
                 // Clear away the material from any existing visualisation
                 // before we proceed
                 d3.select("svg").remove()
 
                 // Fill Styling
-                var hue_1 = 230;
+                var hue1 = 230;
                 var saturation1 = 1;
-                var lightness1 = 0.8;
+                var lightness1 = 0.9;
 
-                var hue_2 = hue_1;
+                var hue2 = hue1;
                 var saturation2 = 1;
                 var lightness2 = 0.15;
 
                 var base_colours = {
-                    hue_1: hue_1,
-                    hue_2: hue_2,
+                    hue_1: hue1,
+                    hue_2: hue2,
                     saturation1: saturation1,
                     saturation2: saturation2,
                     lightness1: lightness1,
@@ -43,10 +42,17 @@
 
                 // ********************************
                 // Define variables & static config
-                var svgHeight = 450,
-                    margin = {top: 5, right: 5, bottom: 10, left: 100},
-                    height = svgHeight - margin.top - margin.bottom,
-                    width = 750 - margin.left - margin.right
+                var max = extractMax(plotting_data);
+                var min = extractMin(plotting_data);
+                var unit_name = extractUnit(plotting_data);
+                var svgHeight = 500,
+                    svgWidth = 700,
+                    svgMargin = {top: 10, right: 20, bottom: 10, left: 20},
+                    legendMargin = {top: 60, right: 50, bottom: 60, left: 50},
+                    legendHeight = 150,
+                    legendWidth = svgWidth - svgMargin.left - svgMargin.right,
+                    mapHeight = svgHeight - svgMargin.top - svgMargin.bottom - legendHeight,
+                    mapWidth = svgWidth - svgMargin.left - svgMargin.right;
 
                 var projection = d3.geo.albersUsa()
                     .scale(1)
@@ -58,16 +64,18 @@
                 // courtesy of M Bostock
                 // http://stackoverflow.com/questions/14492284/center-a-map-in-d3-given-a-geojson-object
                 var b  = path.bounds(border_data),
-                    s = .95 / Math.max((b[1][0] - b[0][0]) / width, (b[1][1] - b[0][1]) / height),
-                    t = [(width - s * (b[1][0] + b[0][0])) / 2, (height - s * (b[1][1] + b[0][1])) / 2];
+                    s = .95 / Math.max((b[1][0] - b[0][0]) / mapWidth, (b[1][1] - b[0][1]) / mapHeight),
+                    t = [(mapWidth - s * (b[1][0] + b[0][0])) / 2, (mapHeight - s * (b[1][1] + b[0][1])) / 2];
 
                 projection
                     .scale(s)
                     .translate(t);
 
                 var svg = d3.select("div.map-container").append("svg")
-                            .attr("width", width)
-                            .attr("height", height)
+                            .attr("width", svgWidth)
+                            .attr("height", svgHeight)
+                            .attr("transform", "translate("+ svgMargin.left +","+ svgMargin.top +")");
+
 
                 svg.append("g")
                     .attr("class", "counties")
@@ -77,7 +85,7 @@
                         .attr("class", "states")
                         .attr("d", path)
                         .style('stroke', "rgb(200, 200, 200)")
-                        .style('fill', function(d) { return getColour(d, plotting_data); })
+                        .style('fill', function(d) { return getColour(d, plotting_data, min, max); })
                         .on("click", clicked)
                         .on("mouseover", function(){
                             return tooltip.style("visibility", "visible");
@@ -94,8 +102,17 @@
                             return tooltip.style("visibility", "hidden");
                         });
 
+                http://stackoverflow.com/questions/10805184/d3-show-data-on-mouseover-of-circle
+                var tooltip = d3.select("body")
+                    .append("button")
+                    .attr("class", "btn")
+                    .style("position", "absolute")
+                    .style("z-index", "10")
+                    .style("visibility", "hidden")
+                    .text("none");
+
                 function extractMax(data) {
-                    var max = null
+                    var max = null;
                     data.forEach(function(obj, index, array){
                         if(Number.parseInt(obj.value) > max){
                             max = Number.parseInt(obj.value)
@@ -108,7 +125,7 @@
                 }
 
                 function extractMin(data) {
-                    var min = null
+                    var min = null;
                     data.forEach(function(obj, index, array){
                         if(Number.parseInt(obj.value) < min){
                             min = Number.parseInt(obj.value)
@@ -120,18 +137,16 @@
                     return min
                 }
 
+                function extractUnit(data) {
+                    var item = data[0]
+                    return item.value_unit
+                }
+
                 function getInterpolationValue(obj, min, range, input_data) {
                     var returnValue = null;
                     var name = obj.properties.name.toLowerCase();
-                    //console.log('=============================')
-                    //console.log(name);
-                    //console.log('=============================')
                     input_data.forEach(function(obj, idx, arr) {
-                        //console.log(obj.region_name.toLowerCase())
                         if(obj.region_name.toLowerCase() === name) {
-                            //console.log('**********************')
-                            //console.log("MATCH!")
-                            //console.log('**********************')
                             returnValue = obj.value;
                             returnValue = (returnValue - min) / range;
                         }
@@ -152,9 +167,7 @@
                     return [returnValue, unit];
                 }
 
-                function getColour(obj, input_data){
-                    var max = extractMax(input_data);
-                    var min = extractMin(input_data);
+                function getColour(obj, input_data, min, max){
                     var range = max - min;
                     var colourRatio = getInterpolationValue(obj, min, range, input_data);
                     if(colourRatio === null) {
@@ -167,27 +180,58 @@
                 // http://stackoverflow.com/questions/10884886/d3js-how-to-get-lat-log-geocoordinates-from-mouse-click
                 // http://stackoverflow.com/questions/19499323/location-path-doesnt-change-in-a-factory-with-angularjs
                 function clicked(d) {
-                    console.log('clicked')
                     $rootScope.selectedStateCoordinates = projection.invert(path.centroid(d))
                     SearchStatesFactory.get({long: $rootScope.selectedStateCoordinates[0],
                                              lat: $rootScope.selectedStateCoordinates[1]},
                         function(success_data) {
                             d3.selectAll("body>button").remove()
-                            console.log("Success!")
-                            console.log(success_data);
-                            $location.path("/us-counties-map/"+ success_data.statefp);
-                            $rootScope.$apply()
+                            $location.path("/us-counties-map/state/"+success_data.statefp+"/year/"+selected_year+"/crop/"+selected_crop+"/");
                     })
                 }
 
-                http://stackoverflow.com/questions/10805184/d3-show-data-on-mouseover-of-circle
-                var tooltip = d3.select("body")
-                    .append("button")
-                    .attr("class", "btn")
-                    .style("position", "absolute")
-                    .style("z-index", "10")
-                    .style("visibility", "hidden")
-                    .text("none");
+                var key = d3.select("svg")
+                var legend = key
+                    .append("defs")
+                    .append("svg:linearGradient")
+                    .attr("id", "gradient")
+                    .attr("x1", "100%")
+                    .attr("y1", "100%")
+                    .attr("x2", "0%")
+                    .attr("y2", "100%")
+                    .attr("spreadMethod", "pad");
+                legend
+                    .append("stop")
+                    .attr("offset", "0%")
+                    .attr("stop-color", d3.hsl(hue2, saturation2, lightness2))
+                    .attr("stop-opacity", 1);
+                legend
+                    .append("stop")
+                    .attr("offset", "100%")
+                    .attr("stop-color", d3.hsl(hue1, saturation1, lightness1))
+                    .attr("stop-opacity", 1);
+                key
+                    .append("rect")
+                    .attr("width", legendWidth - legendMargin.left - legendMargin.right)
+                    .attr("height", legendHeight - legendMargin.top - legendMargin.bottom)
+                    .style("fill", "url(#gradient)")
+                    .attr("transform", "translate("+ legendMargin.left +","+ (mapHeight + legendMargin.top) +")");
+                var x = d3.scale.linear()
+                    .range([0, legendWidth  - legendMargin.left - legendMargin.right])
+                    .domain([min, max]);
+                var xAxis = d3.svg.axis()
+                    .scale(x)
+                    .orient("bottom");
+                key
+                    .append("g")
+                    .attr("class", "x axis")
+                    .attr("transform", "translate("+ legendMargin.left +","+ (mapHeight + legendHeight - legendMargin.bottom) +")")
+                    .call(xAxis)
+                    .append("text")
+                    .attr("x", legendMargin.left + 20)
+                    .attr("dy", -(legendHeight - legendMargin.top - legendMargin.bottom)-5)
+                    .style("text-anchor", "end")
+                    .text(unit_name);
+
 
             }
         }

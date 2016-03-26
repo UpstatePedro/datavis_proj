@@ -27,26 +27,20 @@
         </div>
 
         <div class="row main-body">
-            <div class="col-md-3 sidebar">
-                <nav>
+            <div class="col-md-2 sidebar">
+
+                <nav class="col-lg-12 col-md-12 col-sm-12">
                     <ul class="nav nav-pills nav-stacked">
                       <li role="presentation" id="Home" class="nav-option text-center"><a href="{{ base_url }}/#/">Home</a></li>
                       <li role="presentation" id="States-map" class="nav-option text-center"><a href="{{ base_url }}/#/us-states-map">States Map</a></li>
-                      <li role="presentation" id="Counties-map" class="nav-option text-center"><a href="{{ base_url }}/#/us-counties-map">Counties Map</a></li>
                       <li role="presentation" id="Historical yields" class="nav-option text-center"><a href="{{ base_url }}/#/historical-yields">Historical yields</a></li>
                       <li role="presentation" id="Nav-3" class="nav-option text-center"><a href="{{ base_url }}/technology/">Technologies used</a></li>
                     </ul>
                 </nav>
             </div>
-            
-            <div>
-                <form action="">
-                    <input type="select" label="crop">
-                    <input type="text">
-                </form>
-            </div>
 
-            <div class="col-md-9" ng-view>
+
+            <div class="col-md-10" ng-view>
 
             </div>
         </div>
