@@ -10,7 +10,7 @@ class CountyCropYieldListSerialiser(serializers.ModelSerializer):
 
     class Meta:
         model = CountyCropYield
-        fields = ('year', 'crop_name', 'region_name', 'yield_value', 'value', 'yield_unit', 'value_unit')
+        fields = ('year', 'county_code', 'crop_name', 'region_name', 'yield_value', 'value', 'yield_unit', 'value_unit')
 
     def get_yield_value(self, obj):
         return obj.yield_value

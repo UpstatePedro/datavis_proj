@@ -5,13 +5,15 @@
         '$rootScope',
         '$location',
         'SearchStatesFactory',
+        'SearchCountiesFactory',
     function(
         $rootScope,
         $location,
-        SearchStatesFactory) {
+        SearchStatesFactory,
+        SearchCountiesFactory) {
 
         return {
-            state_choropleth: function (border_data, plotting_data, selected_year, selected_crop, type) {
+            state_choropleth: function (border_data, plotting_data, selected_year, selected_crop, type, statefp) {
                 // Clear away the material from any existing visualisation
                 // before we proceed
                 d3.select("svg").remove()
@@ -78,11 +80,16 @@
 
 
                 svg.append("g")
-                    .attr("class", "counties")
+                    .attr("class", "regions")
                     .selectAll("path")
                         .data(border_data.features)
                     .enter().append("path")
-                        .attr("class", "states")
+                        .attr("class", "regions")
+                        .attr("id", function(d) { return d.properties.name; })
+                        .attr("data", function(d) {
+                            var result = getValue(d, plotting_data);
+                            return result[0] + ", " + result[1];
+                        })
                         .attr("d", path)
                         .style('stroke', "rgb(200, 200, 200)")
                         .style('fill', function(d) { return getColour(d, plotting_data, min, max); })
@@ -161,7 +168,7 @@
                     input_data.forEach(function(obj, idx, arr) {
                         if(obj.region_name.toLowerCase() === name) {
                             returnValue = obj.value;
-                            unit = obj.yield_unit;
+                            unit = obj.value_unit;
                         }
                     })
                     return [returnValue, unit];
@@ -180,24 +187,48 @@
                 // http://stackoverflow.com/questions/10884886/d3js-how-to-get-lat-log-geocoordinates-from-mouse-click
                 // http://stackoverflow.com/questions/19499323/location-path-doesnt-change-in-a-factory-with-angularjs
                 function clicked(d) {
-                    $rootScope.selectedStateCoordinates = projection.invert(path.centroid(d))
-                    SearchStatesFactory.get({long: $rootScope.selectedStateCoordinates[0],
-                                             lat: $rootScope.selectedStateCoordinates[1]},
-                        function(success_data) {
-                            d3.selectAll("body>button").remove()
-                            $location.path("/us-counties-map/state/"+success_data.statefp+"/year/"+selected_year+"/crop/"+selected_crop+"/");
-                    })
+                    if(type==="state") {
+                        $rootScope.selectedStateCoordinates = projection.invert(path.centroid(d))
+                        SearchStatesFactory.get({
+                                long: $rootScope.selectedStateCoordinates[0],
+                                lat: $rootScope.selectedStateCoordinates[1]
+                            },
+                            function (success_data) {
+                                d3.selectAll("body>button").remove()
+                                $location.path("/us-counties-map/state/" + success_data.statefp + "/year/" + selected_year + "/crop/" + selected_crop + "/");
+                            }, function (error) {
+                                console.log(error)
+                            }
+                        )
+                    } else if(type==="county") {
+                        $rootScope.selectedCountyCoordinates = projection.invert(path.centroid(d))
+                        SearchCountiesFactory.get({
+                                long: $rootScope.selectedCountyCoordinates[0],
+                                lat: $rootScope.selectedCountyCoordinates[1]
+                            },
+                            function (success_data) {
+                                console.log(success_data);
+                                console.log(success_data.countyfp);
+                                d3.selectAll("body>button").remove()
+                                $location.path("/us-county-chart/crop/"+ selected_crop +"/state/"+ statefp +"/county/"+ success_data.countyfp +"/");
+                            }, function (error) {
+                                console.log(error)
+                            }
+                        )
+                    }
                 }
 
+                // http://bl.ocks.org/mbostock/1086421
+                // http://bl.ocks.org/darrenjaworski/5397362
                 var key = d3.select("svg")
                 var legend = key
                     .append("defs")
                     .append("svg:linearGradient")
                     .attr("id", "gradient")
                     .attr("x1", "100%")
-                    .attr("y1", "100%")
+                    .attr("y1", "0%")
                     .attr("x2", "0%")
-                    .attr("y2", "100%")
+                    .attr("y2", "0%")
                     .attr("spreadMethod", "pad");
                 legend
                     .append("stop")
@@ -231,7 +262,6 @@
                     .attr("dy", -(legendHeight - legendMargin.top - legendMargin.bottom)-5)
                     .style("text-anchor", "end")
                     .text(unit_name);
-
 
             }
         }

@@ -1,3 +1,5 @@
+* { outline: 1px solid #f0f0f0; }
+g {background-color: #00b3ee;}
 :root {
   --top-level-site-bg: rgb(28, 58, 64);
   --mid-level-site-bg: rgb(57, 116, 127);
@@ -10,9 +12,9 @@
   --header-height: 100px;
 
   --thumbnail-shade-1: rgb(255, 220, 165);
-  --thumbnail-shade-2: rgb(230, 180, 200);
+  --thumbnail-shade-2: rgb(200, 150, 180);
   --thumbnail-shade-3: rgb(220, 220, 255);
-  --thumbnail-shade-4: rgb(195, 240, 225);
+  --thumbnail-shade-4: rgb(145, 180, 215);
   --thumbnail-shade-5: rgb(255, 255, 205);
 }
 
@@ -111,4 +113,12 @@ path {
 
 .tracker-text text {
   color: #293FBA;
+}
+
+h3 {
+  color: steelblue;
+}
+h2 {
+  text-shadow: -1px -1px 1px #aaa,
+             0px 4px 1px rgba(0,0,0,0.5);
 }

@@ -41,6 +41,24 @@ class UsCountyBorderListByState(APIView):
         return Response(serializer.data)
 
 
+class CountySearch(APIView):
+    """
+    List all UsCountyBorders that contain a specific coordinates point
+    """
+
+    def get(self, request, long, lat, format=None):
+        point = GEOSGeometry('{ "type": "Point", "coordinates": [ ' + long + ', ' + lat + ' ] }')
+        county = UsCountyBorder.objects.filter(geom__contains=point)
+        statefp = county[0].statefp
+        state = UsStateBorder.objects.get(statefp=statefp)
+        context = {
+            'county_name': county[0].name,
+            'countyfp': county[0].countyfp,
+            'state_name': state.name
+        }
+        return Response(context)
+
+
 class UsStateBorderList(APIView):
     """
     List all UsStateBorders
@@ -65,7 +83,7 @@ class UsStateBorderDetail(APIView):
 
 class StateSearch(APIView):
     """
-    List all UsCountyBorders
+    List all UsStateBorders that contain a specific coordinates point
     """
 
     def get(self, request, long, lat, format=None):
@@ -74,5 +92,20 @@ class StateSearch(APIView):
         context = {
             'state_name': state[0].name,
             'statefp': state[0].statefp
+        }
+        return Response(context)
+
+class StateNameFromFp(APIView):
+    """
+    Return the name of a state, given it's FP code
+    """
+    def get(self, request, statefp, format=None):
+        try:
+            state_name = UsStateBorder.objects.get(statefp=statefp).name
+        except:
+            return Response("no state found with fp: %s" % statefp)
+        context = {
+            'statefp': statefp,
+            'state_name': state_name
         }
         return Response(context)

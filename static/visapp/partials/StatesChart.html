@@ -1,0 +1,35 @@
+<div class="row">
+
+    <div class="col-lg-6 col-md-6 col-sm-6">
+        <label for="start_year_selection"> Start year: </label>
+        <select name="start_year_selection" id="start_year_select"
+                ng-model="filterStartYear"
+                ng-options="item for item in yearArray"
+                ng-change="updateChart(statefp, crop_name, filterStartYear, filterEndYear, chartData)">
+        </select>
+    </div>
+    <div class="col-lg-6 col-md-6 col-sm-6">
+        <label for="end_year_selection"> End year: </label>
+        <select name="end_year_selection" id="end_year_select"
+                ng-model="filterEndYear"
+                ng-options="item for item in yearArray"
+                ng-change="updateChart(statefp, crop_name, filterStartYear, filterEndYear, chartData)">
+        </select>
+    </div>
+
+    <div class="col-lg-6 col-md-6 col-sm-6">
+        <label for="crop_selection"> Crop: </label>
+        <select name="crop_selection" id="crop_select"
+                ng-model="crop_name"
+                ng-change="updateChart(statefp, crop_name, filterStartYear, filterEndYear, chartData)">
+          <option id="corn" value="corn">Corn</option>
+          <option id="soy" value="soy">Soybean</option>
+          <option id="wheat" value="wheat">Wheat</option>
+        </select>
+    </div>
+</div>
+
+<div class="row chart-container">
+
+
+</div>

@@ -14,9 +14,17 @@ visApp.config([
                 controller: "StatesMapController",
                 templateUrl: "static/visapp/partials/StatesMap.html"
             })
+            .when("/us-state-chart/crop/:crop/state/:statefp/", {
+                controller: "HistoricalStateChartController",
+                templateUrl: "static/visapp/partials/StatesChart.html"
+            })
             .when("/us-counties-map/state/:statefp/year/:year/crop/:crop/", {
                 controller: "CountiesMapController",
                 templateUrl: "static/visapp/partials/CountiesMap.html"
+            })
+            .when("/us-county-chart/crop/:crop/state/:statefp/county/:countyfp/", {
+                controller: "HistoricalCountyChartController",
+                templateUrl: "static/visapp/partials/CountiesChart.html"
             })
             .when("/historical-yields", {
                 controller: "HistoricalYieldsController",

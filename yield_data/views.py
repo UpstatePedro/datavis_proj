@@ -37,7 +37,7 @@ class UsStateCropYieldList(APIView):
                                                    year__lte=end_year,
                                                    crop_name=crop_name,
                                                    state_fips_code=statefp
-                                                   )
+                                                   ).order_by('year')
         serialiser = StateCropYieldListSerialiser(state_data, many=True)
         return Response(serialiser.data)
 
@@ -64,15 +64,35 @@ class UsCountiesCropYieldList(APIView):
     List member-Counties crop yields for a particular crop-State-year combination
     """
 
-    def get(self, request, start_year, end_year, crop, statefp, format=None):
+    def get(self, request, statefp, crop, start_year, end_year, format=None):
+        state_fp = int(statefp)
+        crop_name = API_CROP_DICT[crop]
         start_year = int(start_year)
         end_year = int(end_year)
-        statefp = int(statefp)
-        crop_name = API_CROP_DICT[crop]
         county_data = CountyCropYield.objects.filter(year__gte=start_year,
                                                      year__lte=end_year,
                                                      crop_name=crop_name,
-                                                     state_fips_code=statefp
+                                                     state_fips_code=state_fp
+                                                     )
+        serialiser = CountyCropYieldListSerialiser(county_data, many=True)
+        return Response(serialiser.data)
+
+class UsCountyCropYieldList(APIView):
+    """
+    List historical crop yields for a single county
+    """
+
+    def get(self, request, statefp, countyfp, crop, start_year, end_year, format=None):
+        state_fp = int(statefp)
+        county_fp = int(countyfp)
+        crop_name = API_CROP_DICT[crop]
+        start_year = int(start_year)
+        end_year = int(end_year)
+        county_data = CountyCropYield.objects.filter(year__gte=start_year,
+                                                     year__lte=end_year,
+                                                     crop_name=crop_name,
+                                                     county_code=county_fp,
+                                                     state_fips_code=state_fp
                                                      )
         serialiser = CountyCropYieldListSerialiser(county_data, many=True)
         return Response(serialiser.data)

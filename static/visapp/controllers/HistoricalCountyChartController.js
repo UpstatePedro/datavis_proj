@@ -1,57 +1,57 @@
 (function() {
     'use strict';
 
-    visApp.controller('StatesMapController', [
+    visApp.controller('HistoricalCountyChartController', [
         '$scope',
         '$rootScope',
         '$location',
-        'StateBoundariesFactory',
+        '$routeParams',
+        'CountyYieldDataFactory',
         'AllStatesYieldDataFactory',
-        'D3DrawChoroplethFactory',
         'AvailableYieldYearsFactory',
+        'HistoricalChartFactory',
     function(
         $scope,
         $rootScope,
         $location,
-        StateBoundariesFactory,
+        $routeParams,
+        CountyYieldDataFactory,
         AllStatesYieldDataFactory,
-        D3DrawChoroplethFactory,
-        AvailableYieldYearsFactory
+        AvailableYieldYearsFactory,
+        HistoricalChartFactory
     ) {
-        $scope.showSelections = true;
-        $scope.state_boundaries = null;
 
-        //$scope.yearArray = extractYears($scope.year_range.min, $scope.year_range.max);
         getYears($scope, $rootScope);
-        $scope.cropData = {};
-        $scope.crop_name = 'corn';
-        $scope.filterYear = '2000';
+        $scope.countyfp = $routeParams.countyfp;
+        $scope.statefp = $routeParams.statefp;
+        $scope.crop_name = $routeParams.crop;
+        $scope.filterStartYear = '2000';
+        $scope.filterEndYear = '2014';
+        $scope.chartData = null;
 
-        function updateData(year, crop, data) {
-            data = AllStatesYieldDataFactory.query({
-                start_year: year,
-                end_year: year,
-                crop_name: crop
-            }, function(success) {
-            }, function(error) {
-            });
-            return data;
+        getYieldData($scope.statefp, $scope.countyfp, $scope.crop_name, $scope.filterStartYear, $scope.filterEndYear, $scope.chartData);
+        $scope.updateChart = getYieldData;
+
+        function drawHistoricalChart(chartData) {
+            HistoricalChartFactory.historical_chart(chartData);
         }
-
-        function drawChart(state_boundaries, cropData, year, crop, region_type) {
-            StateBoundariesFactory.get(function(success) {
-                state_boundaries = success;
-                D3DrawChoroplethFactory.state_choropleth(state_boundaries, cropData, year, crop, region_type);
-            })
+        function getYieldData(statefp, countyfp, crop, start_year, end_year, chartData) {
+            CountyYieldDataFactory.query(
+                {
+                    statefp: statefp,
+                    countyfp: countyfp,
+                    crop: crop,
+                    start_year: start_year,
+                    end_year: end_year
+                }, function(success) {
+                    var result_length = success.length;
+                    chartData = success.slice(0, result_length);
+                    drawHistoricalChart(chartData)
+                }, function(error) {
+                    //console.log(error);
+                }
+            )
         }
-
-        function refreshPage(year, crop, boundaries, data) {
-            data = updateData(year, crop, data)
-            drawChart(boundaries, data, year, crop, "state")
-        }
-        $scope.refreshPage = refreshPage
-        refreshPage($scope.filterYear, $scope.crop_name, $scope.state_boundaries, $scope.cropData)
-
         function extractYears(min, max) {
             var yearArray = [];
             for(var yr = min; yr < max; yr++) {
@@ -61,7 +61,6 @@
             }
             return yearArray;
         }
-
         function getYears(scope, rootScope) {
             if (rootScope.hasOwnProperty('year_range')) {
                 scope.year_range = rootScope.year_range
@@ -80,6 +79,7 @@
                 });
             }
         }
+
     }])
 
 })();
