@@ -33,7 +33,7 @@ describe('Counties chloropleth', function() {
 
         var illinois = element(by.id('montgomery'));
         expect(illinois.getAttribute('data')).toEqual('73.2, BU / ACRE');
-    })
+    });
 
     it('should respond to selection of a crop', function() {
         cropSelect = helpers.selectOption('crop_name', 'Soybean');
@@ -46,4 +46,14 @@ describe('Counties chloropleth', function() {
         expect(illinois.getAttribute('data')).toEqual('43, BU / ACRE');
     })
 
+    it('should have the correct name for the state in the link', function() {
+        var stateName = element(by.binding('state_name'));
+        expect(stateName.getText()).toMatch('Illinois');
+    });
+
+    it('should provide a link to the state-wide historical data viewer', function() {
+        var statewideHistoryLink = element(by.id('statewide-history-link'));
+        expect(statewideHistoryLink.getText()).toMatch('See history for');
+    });
+    
 });
