@@ -5,7 +5,7 @@
         <select name="year_selection"
                 ng-model="filterYear"
                 ng-options="item for item in yearArray"
-                ng-change="refreshPage(filterYear, crop_name, statefp, state_boundaries, cropData)">
+                ng-change="refreshPage(filterYear, crop_name, statefp, state_boundaries, cropData, statefp, screen)">
         </select>
     </div>
 
@@ -13,7 +13,7 @@
         <label for="crop_selection"> Crop: </label>
         <select name="crop_selection"
                 ng-model="crop_name"
-                ng-change="refreshPage(filterYear, crop_name, statefp, state_boundaries, cropData)">
+                ng-change="refreshPage(filterYear, crop_name, statefp, state_boundaries, cropData, statefp, screen)">
           <option value="corn">Corn</option>
           <option value="soy">Soybean</option>
           <option value="wheat">Wheat</option>

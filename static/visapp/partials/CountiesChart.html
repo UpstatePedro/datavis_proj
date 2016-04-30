@@ -5,7 +5,7 @@
         <select name="start_year_selection"
                 ng-model="filterStartYear"
                 ng-options="item for item in yearArray"
-                ng-change="updateChart(statefp, countyfp, crop_name, filterStartYear, filterEndYear, chartData)">
+                ng-change="updateChart(statefp, countyfp, crop_name, filterStartYear, filterEndYear, chartData, screen)">
         </select>
     </div>
     <div class="col-lg-6 col-md-6 col-sm-6">
@@ -13,7 +13,7 @@
         <select name="end_year_selection"
                 ng-model="filterEndYear"
                 ng-options="item for item in yearArray"
-                ng-change="updateChart(statefp, countyfp, crop_name, filterStartYear, filterEndYear, chartData)">
+                ng-change="updateChart(statefp, countyfp, crop_name, filterStartYear, filterEndYear, chartData, screen)">
         </select>
     </div>
 
@@ -21,7 +21,7 @@
         <label for="crop_selection"> Crop: </label>
         <select name="crop_selection"
                 ng-model="crop_name"
-                ng-change="updateChart(statefp, countyfp, crop_name, filterStartYear, filterEndYear, chartData)">
+                ng-change="updateChart(statefp, countyfp, crop_name, filterStartYear, filterEndYear, chartData, screen)">
           <option value="corn">Corn</option>
           <option value="soy">Soybean</option>
           <option value="wheat">Wheat</option>
@@ -30,9 +30,12 @@
 </div>
 
 <div class="row">
-    <a href="{{ base_url }}/#/us-counties-map/state/{{ statefp }}/year/{{ filterEndYear }}/crop/{{ crop_name }}/">
-        <h3 class="col-lg-12 col-md-12 col-sm-12 text-center">Return to state-wide counties map...</h3>
-    </a>
+    <h3 class="col-lg-12 col-md-12 col-sm-12 text-center">
+        {{ county_name }} county
+        <a id="counties-map-link" href="{{ base_url }}/#/us-counties-map/state/{{ statefp }}/year/{{ filterEndYear }}/crop/{{ crop_name }}/">
+            ({{ state_name }})
+        </a>
+    </h3>
 </div>
 
 <div class="row chart-container">

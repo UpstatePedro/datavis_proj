@@ -13,7 +13,7 @@
         SearchCountiesFactory) {
 
         return {
-            state_choropleth: function (border_data, plotting_data, selected_year, selected_crop, type, statefp) {
+            state_choropleth: function (border_data, plotting_data, selected_year, selected_crop, type, statefp, screen) {
                 // Clear away the material from any existing visualisation
                 // before we proceed
                 d3.select("svg").remove()
@@ -47,8 +47,8 @@
                 var max = extractMax(plotting_data);
                 var min = extractMin(plotting_data);
                 var unit_name = extractUnit(plotting_data);
-                var svgHeight = 500,
-                    svgWidth = 700,
+                var svgHeight = 0.6 * screen.height,
+                    svgWidth = 0.6 * screen.width,
                     svgMargin = {top: 10, right: 20, bottom: 10, left: 20},
                     legendMargin = {top: 60, right: 50, bottom: 60, left: 50},
                     legendHeight = 150,
@@ -145,6 +145,9 @@
                 }
 
                 function extractUnit(data) {
+                    console.log('extractUnit')
+                    console.log(data)
+                    console.log(data[0])
                     var item = data[0]
                     return item.value_unit
                 }

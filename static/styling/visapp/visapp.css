@@ -1,4 +1,4 @@
-* { outline: 1px solid #f0f0f0; }
+/** { outline: 1px solid #f0f0f0; }*/
 g {background-color: #00b3ee;}
 :root {
   --top-level-site-bg: rgb(28, 58, 64);
@@ -116,6 +116,9 @@ path {
 }
 
 h3 {
+  color: steelblue;
+}
+h3>a {
   color: steelblue;
 }
 h2 {

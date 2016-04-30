@@ -6,6 +6,7 @@
         '$rootScope',
         '$location',
         '$routeParams',
+        '$window',
         'StateYieldDataFactory',
         'AllStatesYieldDataFactory',
         'AvailableYieldYearsFactory',
@@ -15,12 +16,14 @@
         $rootScope,
         $location,
         $routeParams,
+        $window,
         StateYieldDataFactory,
         AllStatesYieldDataFactory,
         AvailableYieldYearsFactory,
         HistoricalChartFactory
     ) {
 
+        getScreenDimensions($scope, $rootScope, $window);
         getYears($scope, $rootScope);
         $scope.statefp = $routeParams.statefp;
         $scope.crop_name = $routeParams.crop;
@@ -28,14 +31,13 @@
         $scope.filterEndYear = '2014';
         $scope.chartData = null;
 
-        getYieldData($scope.statefp, $scope.crop_name, $scope.filterStartYear, $scope.filterEndYear, $scope.chartData);
+        getYieldData($scope.statefp, $scope.crop_name, $scope.filterStartYear, $scope.filterEndYear, $scope.chartData, $scope.screen);
         $scope.updateChart = getYieldData;
 
-        function drawHistoricalChart(chartData) {
-            HistoricalChartFactory.historical_chart(chartData);
+        function drawHistoricalChart(chartData, screen) {
+            HistoricalChartFactory.historical_chart(chartData, screen);
         }
-        function getYieldData(statefp, crop, start_year, end_year, chartData) {
-            console.log("called gYD")
+        function getYieldData(statefp, crop, start_year, end_year, chartData, screen) {
             StateYieldDataFactory.query(
                 {
                     statefp: statefp,
@@ -45,7 +47,7 @@
                 }, function(success) {
                     var result_length = success.length;
                     chartData = success.slice(0, result_length);
-                    drawHistoricalChart(chartData)
+                    drawHistoricalChart(chartData, screen)
                 }, function(error) {
                     //console.log(error);
                 }
@@ -77,6 +79,16 @@
                     scope.yearArray = extractYears(scope.year_range.min, scope.year_range.max);
                 });
             }
+        }
+
+        function getScreenDimensions(scope, rootScope, window) {
+            if (rootScope.hasOwnProperty('screen')) {
+                scope.screen = rootScope.screen;
+            } else {
+                rootScope.screen = {};
+                rootScope.screen.height = window.screen.height;
+                rootScope.screen.width = window.screen.width;
+            };
         }
 
     }])

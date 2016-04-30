@@ -58,6 +58,26 @@ class CountySearch(APIView):
         }
         return Response(context)
 
+class CountyNameFromFp(APIView):
+    """
+    Return the name of a state, given it's FP code
+    """
+    def get(self, request, statefp, countyfp, format=None):
+        try:
+            county_name = UsCountyBorder.objects.get(
+                statefp=statefp,
+                countyfp=countyfp
+            ).name
+            state_name = UsStateBorder.objects.get(statefp=statefp).name
+        except:
+            return Response("no state found with fp: %s" % statefp)
+        context = {
+            'statefp': statefp,
+            'countyfp': countyfp,
+            'state_name': state_name,
+            'county_name': county_name
+        }
+        return Response(context)
 
 class UsStateBorderList(APIView):
     """

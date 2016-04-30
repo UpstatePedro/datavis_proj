@@ -5,6 +5,7 @@
         '$scope',
         '$rootScope',
         '$location',
+        '$window',
         'StateBoundariesFactory',
         'AllStatesYieldDataFactory',
         'D3DrawChoroplethFactory',
@@ -13,19 +14,23 @@
         $scope,
         $rootScope,
         $location,
+        $window,
         StateBoundariesFactory,
         AllStatesYieldDataFactory,
         D3DrawChoroplethFactory,
         AvailableYieldYearsFactory
     ) {
+
+        getScreenDimensions($scope, $rootScope, $window);
+        getYears($scope, $rootScope);
         $scope.showSelections = true;
         $scope.state_boundaries = null;
-
-        //$scope.yearArray = extractYears($scope.year_range.min, $scope.year_range.max);
-        getYears($scope, $rootScope);
         $scope.cropData = {};
         $scope.crop_name = 'corn';
         $scope.filterYear = '2000';
+
+        refreshPage($scope.filterYear, $scope.crop_name, $scope.state_boundaries, $scope.cropData, $scope.screen)
+        $scope.refreshPage = refreshPage
 
         function updateData(year, crop, data) {
             data = AllStatesYieldDataFactory.query({
@@ -38,19 +43,17 @@
             return data;
         }
 
-        function drawChart(state_boundaries, cropData, year, crop, region_type) {
+        function drawChart(state_boundaries, cropData, year, crop, region_type, screen) {
             StateBoundariesFactory.get(function(success) {
                 state_boundaries = success;
-                D3DrawChoroplethFactory.state_choropleth(state_boundaries, cropData, year, crop, region_type);
+                D3DrawChoroplethFactory.state_choropleth(state_boundaries, cropData, year, crop, region_type, 'n/a', screen);
             })
         }
 
-        function refreshPage(year, crop, boundaries, data) {
+        function refreshPage(year, crop, boundaries, data, screen) {
             data = updateData(year, crop, data)
-            drawChart(boundaries, data, year, crop, "state")
+            drawChart(boundaries, data, year, crop, "state", screen)
         }
-        $scope.refreshPage = refreshPage
-        refreshPage($scope.filterYear, $scope.crop_name, $scope.state_boundaries, $scope.cropData)
 
         function extractYears(min, max) {
             var yearArray = [];
@@ -79,6 +82,17 @@
                     scope.yearArray = extractYears(scope.year_range.min, scope.year_range.max);
                 });
             }
+        }
+
+        function getScreenDimensions(scope, rootScope, window) {
+            if (rootScope.hasOwnProperty('screen')) {
+                scope.screen = rootScope.screen;
+            } else {
+                rootScope.screen = {};
+                rootScope.screen.height = window.screen.height;
+                rootScope.screen.width = window.screen.width;
+            }
+            ;
         }
     }])
 

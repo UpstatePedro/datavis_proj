@@ -4,7 +4,7 @@
     visApp.factory('HistoricalChartFactory', [function() {
 
         return {
-            historical_chart: function (chartData) {
+            historical_chart: function (chartData, screen) {
                 parseDates(chartData)
                 // Clear away the material from any existing visualisation
                 // before we proceed
@@ -33,10 +33,9 @@
 
                 var max = extractMax(chartData);
                 var min = extractMin(chartData);
-                var unit_name = extractUnit(chartData);
-                var svgHeight = 250,
-                    svgWidth = 500,
-                    svgMargin = {top: 5, right: 5, bottom: 30, left: 50},
+                var svgHeight = 0.4 * screen.height,
+                    svgWidth = 0.6 * screen.width,
+                    svgMargin = {top: 5, right: screen.width*0.05, bottom: 30, left: screen.width*0.05},
                     legendHeight = svgHeight - svgMargin.top - svgMargin.bottom,
                     legendWidth = 0.15*(svgWidth - svgMargin.left - svgMargin.right),
                     legendMargin = {top: 60, right: 50, bottom: 60, left: 50},

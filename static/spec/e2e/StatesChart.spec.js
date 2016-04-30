@@ -1,4 +1,4 @@
-var CountiesChart = require('./helpers/CountiesChartHelper');
+var StatesChart = require('./helpers/StatesChartHelper');
 
 describe('counties chart', function() {
 
@@ -14,18 +14,18 @@ describe('counties chart', function() {
         expect(yearSelect .$('option:checked').getText()).toEqual('2000');
 
         element(by.id('Illinois')).click();
-        element(by.id('montgomery')).click()
+        element(by.id('statewide-history-link')).click()
     });
 
-    it('should be on the counties chart page', function() {
+    it('should be on the states chart page', function() {
        var url = browser.getCurrentUrl();
-        expect(url).toEqual('http://localhost:8000/#/us-county-chart/crop/corn/state/17/county/135/');
+        expect(url).toEqual('http://localhost:8000/#/us-state-chart/crop/corn/state/17/');
     });
 
     describe('displays correct data for selected parameters', function() {
 
         it('should respond to selection of start & end year, and crop', function() {
-            var chart = new CountiesChart();
+            var chart = new StatesChart();
 
             chart.interact('Soybean', '1990', '1995');
             var circles = element.all(by.css('circle'));
@@ -41,21 +41,21 @@ describe('counties chart', function() {
         });
 
         it('should have the correct value attached for each data point', function() {
-            var chart = new CountiesChart();
+            var chart = new StatesChart();
             chart.interact('Soybean', '1990', '1995');
 
             var data_1990 = element(by.id('data-1990')).getAttribute('data');
-            expect(data_1990).toEqual('32');
+            expect(data_1990).toEqual('39');
             var data_1991 = element(by.id('data-1991')).getAttribute('data');
-            expect(data_1991).toEqual('36.5');
+            expect(data_1991).toEqual('37.5');
             var data_1992 = element(by.id('data-1992')).getAttribute('data');
             expect(data_1992).toEqual('43');
             var data_1993 = element(by.id('data-1993')).getAttribute('data');
-            expect(data_1993).toEqual('44');
+            expect(data_1993).toEqual('43');
             var data_1994 = element(by.id('data-1994')).getAttribute('data');
-            expect(data_1994).toEqual('41.5');
+            expect(data_1994).toEqual('45.5');
             var data_1995 = element(by.id('data-1995')).getAttribute('data');
-            expect(data_1995).toEqual('36.5');
+            expect(data_1995).toEqual('39');
         });
 
     });
