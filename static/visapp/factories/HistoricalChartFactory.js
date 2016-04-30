@@ -118,8 +118,12 @@
                 chartData.forEach(function(d) {
                     var value = d.value;
                     var unit = d.value_unit;
+                    var year = d.year;
                     var transition = getTransitionValue(value, max, min);
                     chart.append("circle")
+                        .attr("id", 'data-' + year.toString())
+                        .attr("data", value.toString())
+                        .attr("unit", unit)
                         .attr("cx", x(d.date))
                         .attr("cy", y(d.value))
                         .attr("r", 3.5)

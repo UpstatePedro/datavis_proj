@@ -42,8 +42,8 @@ describe('Counties chloropleth', function() {
         yearSelect = helpers.selectOption('filterYear', '2000');
         expect(yearSelect .$('option:checked').getText()).toEqual('2000');
 
-        var illinois = element(by.id('montgomery'));
-        expect(illinois.getAttribute('data')).toEqual('43, BU / ACRE');
+        var montgomery = element(by.id('montgomery'));
+        expect(montgomery.getAttribute('data')).toEqual('43, BU / ACRE');
     })
 
     it('should have the correct name for the state in the link', function() {
@@ -55,5 +55,5 @@ describe('Counties chloropleth', function() {
         var statewideHistoryLink = element(by.id('statewide-history-link'));
         expect(statewideHistoryLink.getText()).toMatch('See history for');
     });
-    
+
 });
