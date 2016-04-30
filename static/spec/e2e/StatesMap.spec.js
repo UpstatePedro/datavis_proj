@@ -1,4 +1,4 @@
-describe('State chloropleth', function() {
+describe('States chloropleth', function() {
 
     beforeEach(function() {
         browser.get('http://localhost:8000/#/');
