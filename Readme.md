@@ -14,7 +14,7 @@ This project seeks to do several things:
 
 ###Geospatial database
 
-1. Postgresql database
+1. Postgresql database manager
 
 2. PostGIS expansion for postgres - enabling the storage, indexing & efficient querying of geospatial data
 
@@ -27,10 +27,23 @@ $ brew install gdal
 $ brew install libgeoip
 ```
 
+- This project expects two databases:
+    - **datavis_proj**
+    - **datavis_proj_test**
+- These can be created using the `$ createdb dbName` command
+
+- The postGIS extension can be activated for each DB with:
+
+```
+$ psql dbName
+> CREATE EXTENSION postgis;
+> \q
+```
+
 ###Python + dependencies
 1. Python 2.7
 
-2. VirtualEnv / VirtualEnvWrapper (optional, but recommended) for managing your python environment
+2. VirtualEnv / [VirtualEnvWrapper](http://virtualenvwrapper.readthedocs.io/en/latest/) (optional, but recommended) for managing your python environment
 
 3. Please install project python dependencies using pip (once virtual environment activated):
 
@@ -40,11 +53,54 @@ From the project root directory:
 
 ##Migrate the data
 
+```
+# From project root, in virtual env
+
+# Create migrations & DB tables
+$ python manage.py makemigrations
+$ python manage.py migrate
+```
+
+##Load data into the DB
+
 > Note, this could take a long time - there is a lot of data!
+
+```
+# From project root
+
+# Open the django shell
+$ python manage.py shell
+
+> from geo_borders.data_tools import load_counties_shp
+> from geo_borders.data_tools import load_states_shp
+> load_counties_shp.run()
+........
+data will be processed & saved
+........
+
+> load_states_shp.run()
+........
+data will be processed & saved
+........
+```
+
+##Javascript dependencies & testing
+
+1. [Install Node.js & npm package manager](https://nodejs.org/en/download/)
+
+- Having installed node, update the package manager:
+    - `$ (sudo) npm install npm -g`
+
+2. Install [Protractor](http://angular.github.io/protractor/#/) (testing) & update the webdriver
+
+```
+$ npm install -g protractor
+$ webdriver-manager update
+```
 
 ##Run the server
 
-- Django runs on port 8000 by default:
+- Django runs on port 8000 by default (so point your browser at localhost:8000):
 
 `$ python manage.py runserver`
 
