@@ -27,7 +27,7 @@ $ brew install gdal
 $ brew install libgeoip
 ```
 
-- This project expects two databases:
+- This project expects the existence of two (empty) databases:
     - **datavis_proj**
     - **datavis_proj_test**
 - These can be created using the `$ createdb dbName` command
@@ -43,9 +43,19 @@ $ psql dbName
 ###Python + dependencies
 1. Python 2.7
 
-2. VirtualEnv / [VirtualEnvWrapper](http://virtualenvwrapper.readthedocs.io/en/latest/) (optional, but recommended) for managing your python environment
+2. [Pip python package manager](https://pip.pypa.io/en/stable/installing/)
 
-3. Please install project python dependencies using pip (once virtual environment activated):
+3. VirtualEnv / [VirtualEnvWrapper](http://virtualenvwrapper.readthedocs.io/en/latest/) (optional, but recommended) for managing your python environment
+
+```
+#Create a new virtual environment
+$ mkvirtualenv envName
+
+# Work on the new virtual environment
+$ workon envName
+```
+
+4. Please install project python dependencies using pip (once virtual environment activated):
 
 From the project root directory:
 
@@ -97,6 +107,8 @@ data will be processed & saved
 $ npm install -g protractor
 $ webdriver-manager update
 ```
+
+There is a chance you will also need to [install jasmine](https://github.com/jasmine/jasmine-npm). Please try this is tests fail to run...
 
 ##Run the server
 

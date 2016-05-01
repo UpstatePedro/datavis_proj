@@ -64,7 +64,7 @@ describe('counties chart', function() {
         var countiesMapLink = element(by.id('counties-map-link'));
         expect(countiesMapLink.getText()).toMatch('(Illinois)');
 
-        countiesMapLink.element(by.css('h3')).click()
+        countiesMapLink.click()
         var url = browser.getCurrentUrl();
         expect(url).toEqual('http://localhost:8000/#/us-counties-map/state/17/year/2014/crop/corn/');
     });
