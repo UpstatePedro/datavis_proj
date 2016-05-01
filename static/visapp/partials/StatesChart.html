@@ -1,6 +1,6 @@
 <div class="row">
 
-    <div class="col-lg-6 col-md-6 col-sm-6">
+    <div class="col-lg-4 col-md-4 col-sm-4">
         <label for="start_year_selection"> Start year: </label>
         <select name="start_year_selection" id="start_year_select"
                 ng-model="filterStartYear"
@@ -8,7 +8,7 @@
                 ng-change="updateChart(statefp, crop_name, filterStartYear, filterEndYear, chartData, screen)">
         </select>
     </div>
-    <div class="col-lg-6 col-md-6 col-sm-6">
+    <div class="col-lg-4 col-md-4 col-sm-4">
         <label for="end_year_selection"> End year: </label>
         <select name="end_year_selection" id="end_year_select"
                 ng-model="filterEndYear"
@@ -17,7 +17,7 @@
         </select>
     </div>
 
-    <div class="col-lg-6 col-md-6 col-sm-6">
+    <div class="col-lg-4 col-md-4 col-sm-4">
         <label for="crop_selection"> Crop: </label>
         <select name="crop_selection" id="crop_select"
                 ng-model="crop_name"
@@ -31,7 +31,7 @@
 
 <div class="row">
     <a id="counties-map-link" href="{{ base_url }}/#/us-counties-map/state/{{ statefp }}/year/{{ filterEndYear }}/crop/{{ crop_name }}/">
-        <h3 class="col-lg-12 col-md-12 col-sm-12 text-center">Return to state-wide counties map...</h3>
+        <h3 class="col-lg-6 col-md-6 col-sm-6 text-left">Return to counties map</h3>
     </a>
 </div>
 
