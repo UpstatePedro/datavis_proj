@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c8b2dc87-18bc-440d-82a6-3bc11fb38541" name="Default" comment="Data imported, Admin added">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Readme.md" afterPath="$PROJECT_DIR$/Readme.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/spec/e2e/CountiesChart.spec.js" afterPath="$PROJECT_DIR$/static/spec/e2e/CountiesChart.spec.js" />
     </list>
     <ignored path="datavis_proj.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -44,8 +43,8 @@
       <file leaf-file-name="Readme.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Readme.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5529801">
-              <caret line="110" column="138" selection-start-line="110" selection-start-column="138" selection-end-line="110" selection-end-column="138" />
+            <state vertical-scroll-proportion="0.60264903">
+              <caret line="112" column="17" selection-start-line="112" selection-start-column="17" selection-end-line="112" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -1243,8 +1242,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Readme.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5529801">
-          <caret line="110" column="138" selection-start-line="110" selection-start-column="138" selection-end-line="110" selection-end-column="138" />
+        <state vertical-scroll-proportion="0.60264903">
+          <caret line="112" column="17" selection-start-line="112" selection-start-column="17" selection-end-line="112" selection-end-column="17" />
           <folding />
         </state>
       </provider>

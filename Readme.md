@@ -110,7 +110,7 @@ $ webdriver-manager update
 
 There is a chance you will also need to [install jasmine](https://github.com/jasmine/jasmine-npm). Please try this is tests fail to run...
 
-##Run the server
+##Run the Django server
 
 - Django runs on port 8000 by default (so point your browser at localhost:8000):
 
@@ -118,6 +118,7 @@ There is a chance you will also need to [install jasmine](https://github.com/jas
 
 ##Run the tests
 
+- Please run the following whilst the Django server (above) is already running
 - From the project root:
     - Run the testing server: `$ webdriver-manager start`
     - Run the tests: from a different terminal window, `$ protractor static/spec/e2e/conf.js`
