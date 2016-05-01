@@ -53,7 +53,7 @@ describe('Counties chloropleth', function() {
 
     it('should provide a link to the state-wide historical data viewer', function() {
         var statewideHistoryLink = element(by.id('statewide-history-link'));
-        expect(statewideHistoryLink.getText()).toMatch('See history for');
+        expect(statewideHistoryLink.getText()).toMatch('(Illinois)');
     });
 
 });

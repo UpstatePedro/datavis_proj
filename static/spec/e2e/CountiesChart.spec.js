@@ -62,7 +62,7 @@ describe('counties chart', function() {
 
     it('should provide a link back to the counties map', function() {
         var countiesMapLink = element(by.id('counties-map-link'));
-        expect(countiesMapLink.getText()).toMatch('Return to state-wide counties map');
+        expect(countiesMapLink.getText()).toMatch('(Illinois)');
 
         countiesMapLink.element(by.css('h3')).click()
         var url = browser.getCurrentUrl();

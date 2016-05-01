@@ -91,8 +91,7 @@
                 rootScope.screen = {};
                 rootScope.screen.height = window.screen.height;
                 rootScope.screen.width = window.screen.width;
-            }
-            ;
+            };
         }
     }])
 
