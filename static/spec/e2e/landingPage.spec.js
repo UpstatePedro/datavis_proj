@@ -20,10 +20,6 @@ describe('DataVis_Project landing page', function() {
         var mapButton = element(by.id('States-map'));
         expect(mapButton.getText()).toEqual('Back to the States Map')
     })
-    it('should have to link to "Historical Yields"', function() {
-        var chartButton = element(by.id('Historical-yields'));
-        expect(chartButton.getText()).toEqual('National historical yields')
-    })
     it('should have to link "Technologies used"', function() {
         var techButton = element(by.id('Tech-stack'));
         expect(techButton.getText()).toEqual('Technologies used')
