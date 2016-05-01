@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c8b2dc87-18bc-440d-82a6-3bc11fb38541" name="Default" comment="Data imported, Admin added">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/visapp/partials/CountiesChart.html" afterPath="$PROJECT_DIR$/static/visapp/partials/CountiesChart.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/visapp/partials/CountiesMap.html" afterPath="$PROJECT_DIR$/static/visapp/partials/CountiesMap.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/visapp/partials/StatesChart.html" afterPath="$PROJECT_DIR$/static/visapp/partials/StatesChart.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/visapp/partials/StatesMap.html" afterPath="$PROJECT_DIR$/static/visapp/partials/StatesMap.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/spec/e2e/StatesChart.spec.js" afterPath="$PROJECT_DIR$/static/spec/e2e/StatesChart.spec.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/visapp/partials/VisAppLanding.html" afterPath="$PROJECT_DIR$/static/visapp/partials/VisAppLanding.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/index.html" afterPath="$PROJECT_DIR$/templates/index.html" />
     </list>
     <ignored path="datavis_proj.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,37 +37,37 @@
         <entry file="file://$PROJECT_DIR$/Readme.md">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="112" column="17" selection-start-line="112" selection-start-column="17" selection-end-line="112" selection-end-column="17" />
+              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CountiesMap.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/visapp/partials/CountiesMap.html">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-16.25">
-              <caret line="26" column="47" selection-start-line="26" selection-start-column="47" selection-end-line="26" selection-end-column="83" />
+            <state vertical-scroll-proportion="-9.041667">
+              <caret line="35" column="38" selection-start-line="35" selection-start-column="38" selection-end-line="35" selection-end-column="38" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StatesChart.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/visapp/partials/StatesChart.html">
+      <file leaf-file-name="routes.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/visapp/config/routes.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.875">
-              <caret line="19" column="42" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="42" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="20" column="73" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="73" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CountiesChart.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/static/visapp/partials/CountiesChart.html">
+      <file leaf-file-name="VisAppLanding.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/static/visapp/partials/VisAppLanding.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7907743">
-              <caret line="32" column="54" selection-start-line="32" selection-start-column="54" selection-end-line="32" selection-end-column="54" />
+            <state vertical-scroll-proportion="0.27182865">
+              <caret line="11" column="86" selection-start-line="11" selection-start-column="86" selection-end-line="11" selection-end-column="86" />
               <folding />
             </state>
           </provider>
@@ -110,7 +110,6 @@
         <option value="$PROJECT_DIR$/yield_data/views.py" />
         <option value="$PROJECT_DIR$/yield_data/urls.py" />
         <option value="$PROJECT_DIR$/static/visapp/config/routes.js" />
-        <option value="$PROJECT_DIR$/static/visapp/partials/VisAppLanding.html" />
         <option value="$PROJECT_DIR$/static/spec/e2e/landingPage.spec.js" />
         <option value="$PROJECT_DIR$/static/spec/e2e/specHelpers.js" />
         <option value="$PROJECT_DIR$/static/spec/e2e/conf.js" />
@@ -119,14 +118,12 @@
         <option value="$PROJECT_DIR$/static/spec/e2e/StatesMap.spec.js" />
         <option value="$PROJECT_DIR$/static/spec/e2e/helpers/CountiesChartHelper.js" />
         <option value="$PROJECT_DIR$/static/spec/e2e/helpers/StatesChartHelper.js" />
-        <option value="$PROJECT_DIR$/static/spec/e2e/StatesChart.spec.js" />
         <option value="$PROJECT_DIR$/static/visapp/controllers/VisAppLandingController.js" />
         <option value="$PROJECT_DIR$/geo_borders/urls.py" />
         <option value="$PROJECT_DIR$/geo_borders/views.py" />
         <option value="$PROJECT_DIR$/static/visapp/factories/CountyNameFromFp.js" />
         <option value="$PROJECT_DIR$/static/visapp/factories/CountyNameFromFpFactory.js" />
         <option value="$PROJECT_DIR$/templates/visapp_dependencies.html" />
-        <option value="$PROJECT_DIR$/templates/index.html" />
         <option value="$PROJECT_DIR$/static/visapp/factories/HistoricalChartFactory.js" />
         <option value="$PROJECT_DIR$/static/visapp/controllers/HistoricalCountyChartController.js" />
         <option value="$PROJECT_DIR$/static/visapp/controllers/HistoricalStateChartController.js" />
@@ -141,6 +138,9 @@
         <option value="$PROJECT_DIR$/static/visapp/partials/CountiesMap.html" />
         <option value="$PROJECT_DIR$/static/visapp/partials/StatesChart.html" />
         <option value="$PROJECT_DIR$/static/visapp/partials/CountiesChart.html" />
+        <option value="$PROJECT_DIR$/static/spec/e2e/StatesChart.spec.js" />
+        <option value="$PROJECT_DIR$/templates/index.html" />
+        <option value="$PROJECT_DIR$/static/visapp/partials/VisAppLanding.html" />
       </list>
     </option>
   </component>
@@ -326,6 +326,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="datavis_proj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="datavis_proj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="static" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -397,6 +411,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="datavis_proj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="datavis_proj" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="visapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -883,14 +919,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/templates/technology_used.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.5123153">
-          <caret line="23" column="73" selection-start-line="23" selection-start-column="73" selection-end-line="23" selection-end-column="73" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/visapp/factories/AvailableYieldYearsFactory.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -998,13 +1026,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/visapp/config/routes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="20" column="73" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/visapp/factories/HistoricalYieldChartFactory.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.563981">
@@ -1023,13 +1044,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.68720376">
           <caret line="29" column="45" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/spec/e2e/StatesChart.spec.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.971564">
-          <caret line="57" column="41" selection-start-line="57" selection-start-column="41" selection-end-line="57" selection-end-column="41" />
         </state>
       </provider>
     </entry>
@@ -1101,22 +1115,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.54679805">
-          <caret line="42" column="32" selection-start-line="42" selection-start-column="32" selection-end-line="42" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/visapp/partials/VisAppLanding.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.22167487">
-          <caret line="9" column="50" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/visapp/controllers/HistoricalStateChartController.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1150,14 +1148,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/spec/e2e/CountiesMap.spec.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.21800947">
-          <caret line="31" column="74" selection-start-line="31" selection-start-column="74" selection-end-line="31" selection-end-column="74" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1235,34 +1225,82 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Readme.md">
+    <entry file="file://$PROJECT_DIR$/static/visapp/partials/CountiesChart.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="112" column="17" selection-start-line="112" selection-start-column="17" selection-end-line="112" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/visapp/partials/CountiesMap.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.25">
-          <caret line="26" column="47" selection-start-line="26" selection-start-column="47" selection-end-line="26" selection-end-column="83" />
+        <state vertical-scroll-proportion="0.7907743">
+          <caret line="32" column="54" selection-start-line="32" selection-start-column="54" selection-end-line="32" selection-end-column="54" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/static/visapp/partials/StatesChart.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.875">
+        <state vertical-scroll-proportion="0.46952224">
           <caret line="19" column="42" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="42" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/visapp/partials/CountiesChart.html">
+    <entry file="file://$PROJECT_DIR$/static/visapp/partials/CountiesMap.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7907743">
-          <caret line="32" column="54" selection-start-line="32" selection-start-column="54" selection-end-line="32" selection-end-column="54" />
+        <state vertical-scroll-proportion="0.6425041">
+          <caret line="26" column="47" selection-start-line="26" selection-start-column="47" selection-end-line="26" selection-end-column="83" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/spec/e2e/CountiesMap.spec.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2155309">
+          <caret line="31" column="74" selection-start-line="31" selection-start-column="74" selection-end-line="31" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/spec/e2e/StatesChart.spec.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.80982566">
+          <caret line="64" column="61" selection-start-line="64" selection-start-column="61" selection-end-line="64" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/technology_used.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.56836903">
+          <caret line="23" column="73" selection-start-line="23" selection-start-column="73" selection-end-line="23" selection-end-column="73" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/visapp/config/routes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="20" column="73" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="73" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Readme.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.041667">
+          <caret line="35" column="38" selection-start-line="35" selection-start-column="38" selection-end-line="35" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/visapp/partials/VisAppLanding.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.27182865">
+          <caret line="11" column="86" selection-start-line="11" selection-start-column="86" selection-end-line="11" selection-end-column="86" />
           <folding />
         </state>
       </provider>
