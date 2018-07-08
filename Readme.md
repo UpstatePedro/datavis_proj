@@ -1,4 +1,4 @@
-# Welcome to the repo for my data visualisation project
+# Data visualisation hacking
 
 This project seeks to do several things:
 
@@ -18,7 +18,7 @@ This project seeks to do several things:
 
 2. PostGIS expansion for postgres - enabling the storage, indexing & efficient querying of geospatial data
 
-> Homebrew can handle points 1&2, and their dependencies:
+> For Mac, Homebrew can handle points 1&2, and their dependencies:
 
 ```
 $ brew install postgresql
