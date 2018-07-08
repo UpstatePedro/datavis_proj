@@ -1,4 +1,4 @@
-#Welcome to the repo for my data visualisation project
+# Welcome to the repo for my data visualisation project
 
 This project seeks to do several things:
 
@@ -6,13 +6,13 @@ This project seeks to do several things:
 - Use the D3.js visualisation library to produce customised & interactive visualisations of data with Javascript
 - Carry out a preliminary investigation into the implementation of TDD best practices when developing visualisations
 
-##Requirements:
+## Requirements:
 
-###Clone this repository to your local system
+### Clone this repository to your local system
 
 `$ git clone https://github.com/UpstatePedro/datavis_proj.git`
 
-###Geospatial database
+### Geospatial database
 
 1. Postgresql database manager
 
@@ -40,7 +40,7 @@ $ psql dbName
 > \q
 ```
 
-###Python + dependencies
+### Python + dependencies
 1. Python 2.7
 
 2. [Pip python package manager](https://pip.pypa.io/en/stable/installing/)
@@ -61,7 +61,7 @@ From the project root directory:
 
 `$ pip install -r requirements.pip`
 
-##Migrate the data
+## Migrate the data
 
 ```
 # From project root, in virtual env
@@ -71,7 +71,7 @@ $ python manage.py makemigrations
 $ python manage.py migrate
 ```
 
-##Load data into the DB
+## Load data into the DB
 
 > Note, this could take a long time - there is a lot of data!
 
@@ -94,7 +94,7 @@ data will be processed & saved
 ........
 ```
 
-##Javascript dependencies & testing
+## Javascript dependencies & testing
 
 1. [Install Node.js & npm package manager](https://nodejs.org/en/download/)
 
@@ -110,13 +110,13 @@ $ webdriver-manager update
 
 There is a chance you will also need to [install jasmine](https://github.com/jasmine/jasmine-npm). Please try this is tests fail to run...
 
-##Run the Django server
+## Run the Django server
 
 - Django runs on port 8000 by default (so point your browser at localhost:8000):
 
 `$ python manage.py runserver`
 
-##Run the tests
+## Run the tests
 
 - Please run the following whilst the Django server (above) is already running
 - From the project root:
